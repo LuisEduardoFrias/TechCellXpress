@@ -14,6 +14,7 @@ router.use(middlewares);
 //
 router.post('/load_products', async (req, res) => {
   const phone = req.body;
+  
   try {
     const { error, data } = await Admin.loadProducts(phone);
 

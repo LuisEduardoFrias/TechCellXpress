@@ -1,5 +1,7 @@
 //
+'use client'
 import { useState, useEffect } from 'react';
+import useStore from "str/store";
 
 export enum Method {
   GET = 'GET',
@@ -20,10 +22,10 @@ export type Result = {
 };
 
 export default function useFetch(baseUrl: string) {
+  const session = useStore((state) => state.session)
   const [dataFetch, setFetch] = useState<FetchObj>(null);
   const [data, setData] = useState<Result>({ data: null, error: null });
   const [loading, setLoading] = useState(false);
-
   function _fetch({ url, method = Method.GET, body = null }: FetchObj) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -31,7 +33,7 @@ export default function useFetch(baseUrl: string) {
     //   headers.append('Access-Control-Allow-Origin', 'http://localhost:8080');
     headers.append('Access-Control-Allow-Credentials', 'true');
     headers.append('GET', 'POST', 'PUT', 'DELETE');
-    // headers.append('Authorization','Basic ' + base64.encode(username + ':' + password));
+    headers.append('Authorization', 'Basic ' + session?.token);
 
     return fetch(joinURLs(baseUrl, url), {
       method: method,

@@ -1,6 +1,6 @@
 //
 'use client'
-import { useState, useEffect, ReactElement } from 'react';
+import { useState, useEffect, useRef, ReactElement } from 'react';
 import Alert, { aletType, variantType } from './alert';
 import useFetch, { Method } from 'hk/use_fetch';
 import Loading from 'cp/loading';
@@ -22,30 +22,47 @@ type TFormProps<T> = {
   method: Method,
   validationEmptyFild: (obj: T, data: DataResult) => ValidationResult,
   children: ReactElement
+  fetchResult?: (data: DataResult) => void,
 }
 
-export default function Form<T>({ url, method, validationEmptyFild, children }: TFormProps<T>) {
-  const [setFetch, data, loading] = useFetch('http://localhost:3000');
+export default function Form<T>({ url, method, validationEmptyFild, fetchResult, children }: TFormProps<T>) {
+  const [setFetch, data, loading] = useFetch(process.env.NEXT_PUBLIC_API_TECHCELLXPRESS);
   const [validation, setValidation] = useState({ isEmpty: false, message: "" });
+  const [result, setResult] = useState(data);
+  const formRef = null;
+  const show = validation.isEmpty || result.data || result.error;
 
-  const show = validation.isEmpty || data.data || data.error;
+  useEffect(() => {
+
+    if (data.data) {
+      //formRef?.current.reset();
+    }
+
+    if (typeof fetchResult === 'function')
+      fetchResult(data);
+
+    setResult(data)
+
+  }, [data])
 
   const alertData = {
     color:
       (validation.isEmpty && aletType.info) ||
-      (data.error && aletType.error) ||
-      (data.data && aletType.success),
+      (result.data && aletType.success) ||
+      (result.error && aletType.error),
     severity:
       (validation.isEmpty && aletType.info) ||
-      (data.error && aletType.error) ||
-      (data.data && aletType.success),
-    message: validation.message,
+      (result.data && aletType.success) ||
+      (result.error && aletType.error),
+    message:
+      result.error ? result.error :
+        result.data ? 'Success' :
+          validation.message,
     variant: variantType.filled,
   };
 
   function handlerSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
     const formData = new FormData(event.target);
 
     const formDataObject = {};
@@ -53,9 +70,10 @@ export default function Form<T>({ url, method, validationEmptyFild, children }: 
       formDataObject[key] = value;
     });
 
-    const validationResult: ValidationResult = validationEmptyFild(formDataObject as T, data);
+    const validationResult: ValidationResult = validationEmptyFild(formDataObject as T);
     if (validationResult) {
       setValidation(validationResult);
+      setResult({ error: null, data: null })
       return;
     }
 
@@ -106,7 +124,7 @@ export default function Form<T>({ url, method, validationEmptyFild, children }: 
           }}
         />
       </div>
-      <form onSubmit={handlerSubmit} style={{
+      <form ref={formRef} onSubmit={handlerSubmit} style={{
         display: 'flex',
         padding: '5px',
         paddingTop: loading ? '40px' : '',
@@ -116,6 +134,7 @@ export default function Form<T>({ url, method, validationEmptyFild, children }: 
         <div style={StyleFacade}></div>
         {children}
         <button
+          disabled={loading}
           type='submit'
           className='btn'>
           Send

@@ -18,27 +18,21 @@ export default function Register() {
   }
 
   //I could have used react-hook-form to validate the fields.
-  function handlervalidation(obj: User, data: DataResult): ValidationResult {
+  function handlervalidation(obj: User): ValidationResult {
     if (!obj.name || !obj.lastName || !obj.email || !obj.user || !obj.password || !obj.confirmPassword)
       return { isEmpty: true, message: "Campos requeridos." };
 
     if (obj.password != obj.confirmPassword)
       return { isEmpty: true, message: "Password and Confirm Password are not the same." };
 
-    if (obj.password.length > 8)
+    if (obj.password.length < 8)
       return { isEmpty: true, message: "Password length is less than 8." };
-
-    if (data.data)
-      return { isEmpty: false, message: "Success" };
-
-    if (data.error)
-      return { isEmpty: false, message: data.error };
   }
 
   return (
     <div className="container-register">
       <Form<User>
-        url={'register'}
+        url={'/register'}
         method={Method.POST}
         validationEmptyFild={handlervalidation} >
         <label>Name *

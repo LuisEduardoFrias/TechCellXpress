@@ -1,13 +1,16 @@
 //
 'use client'
 import { EventForm } from 'react'
-import {singIn} from 'next-auth/react'
+import { singIn } from 'next-auth/react'
 import Form, { DataResult, Method, ValidationResult } from 'cp/form.tsx';
 import { useRouter } from 'next/navigation';
-
+import useStore from 'str/store.ts';
+import useCookie from 'hk/use_local_cookie.ts';
 import 'st/register.css'
 
 export default function Login() {
+  const login = useStore((state) => state.login)
+  const [value, setCookie] = useCookie('access_token');
   const rauter = useRouter();
 
   type User = {
@@ -15,23 +18,26 @@ export default function Login() {
     password: string,
   }
 
+  function handlerFetchResult(data: DataResult) {
+    if (data.data) {
+      setCookie('access_token', data.data)
+      login(data.data)
+      rauter.push('/')
+    }
+  }
+
   //I could have used react-hook-form to validate the fields.
-  function handlervalidation(obj: User, data: DataResult): ValidationResult {
+  function handlervalidation(obj: User): ValidationResult {
     if (!obj.user || !obj.password)
       return { isEmpty: true, message: "Campos requeridos." };
-
-    if (data.data)
-      return { isEmpty: false, message: "Success" };
-
-    if (data.error)
-      return { isEmpty: false, message: data.error };
   }
 
   return (
     <div className="container-register">
       <Form<User>
-        url={'register'}
+        url={'login'}
         method={Method.POST}
+        fetchResult={handlerFetchResult}
         validationEmptyFild={handlervalidation} >
         <label >User *
           <input type="text" name="user" placeholder="Juan316" />

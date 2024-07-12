@@ -14,10 +14,6 @@ export default class Admin {
         const capacity = await capacityInsert(_phone.capacity);
         chunk[i] = _phone;
         chunk[i].capacity = capacity.id;
-
-        console.log('----------------------------')
-        console.log("data: " + JSON.stringify(chunk[i], null, 2))
-        console.log('----------------------------')
       }
 
       result = await load(chunk);
@@ -40,7 +36,7 @@ export default class Admin {
   static async removeAll() {
     const result = await allRemove();
 
-    if (result === 0)
+    if (result>=0)
       return { error: null, data: result };
 
     return { error: 'default error', data: null };

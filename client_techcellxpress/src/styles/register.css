@@ -11,15 +11,18 @@
   >form {
     display: flex;
     flex-direction: column;
+    z-index: 2;
     gap: 10px;
     
     >label {
       display: flex;
       flex-direction: column;
       gap: 3px;
+      z-index: 2;
       
       >input {
         color: white;
+        z-index: 2;
         background-color: black;
         border: var(--border-with) solid var(--border-color);
         border-radius: var(--border-radius);
@@ -62,5 +65,11 @@
   
   >button:active i {
     transform: scale(.9);
+  }
+  
+  >button:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
   }
 }

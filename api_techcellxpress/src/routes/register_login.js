@@ -177,7 +177,6 @@ router.post('/logout', middlewares, async (req, res) => {
 */
 //
 router.post('/register', async (req, res) => {
-
   const register = req.body;
 
   try {

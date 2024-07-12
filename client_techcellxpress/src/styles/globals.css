@@ -191,3 +191,7 @@ main {
   align-items: flex-start;
   
 }
+
+button {
+  cursor: pointer;
+}

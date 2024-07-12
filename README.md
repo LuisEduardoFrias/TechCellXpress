@@ -1,6 +1,11 @@
 # TechCellXpress
 Cell Phone Store Manager.
 
+## Requires node v22.2.0
+## Execute the command in the root folder --> 'npm run dev'
+## Test user --> LuisEF28
+## Test pass --> 12345678
+
 ---------------------------------------
 
 # Prueba de sincronización del desarrollador de JavaScript de pila completa Lexart ® 2024
