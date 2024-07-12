@@ -1,0 +1,32 @@
+{
+  "name": "client_techcellxpress",
+  "version": "0.1.0",
+  "description": "client of techcellxpress",
+  "author": "luiseduardofrias",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "react",
+    "nextjs"
+  ],
+  "dependencies": {
+    "@tanstack/react-table": "^8.19.2",
+    "next": "13.5.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.6.0",
+    "eslint-config-next": "^14.2.5",
+    "typescript": "^5.5.3"
+  }
+}

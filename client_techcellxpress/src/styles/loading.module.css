@@ -1,0 +1,24 @@
+/**************/
+.ldDualRing {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%);
+  width: 35px;
+  height: 35px;
+  z-index: 99;
+  background-color: transparent;
+  display: block;
+  border: 8px double var(--border-color);
+  border-inline-end: 6px double var(--border-color);
+  border-block-end: 6px double var(--border-color);
+  border-inline-start: 10px double transparent;
+  border-radius: 50%;
+  animation: ld-dual-ring 1.2s ease-in-out infinite backwards;
+}
+
+@keyframes ld-dual-ring {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,66 @@
+/**/
+.container-register {
+  max-width: 400px;
+  padding: 5px;
+  border: var(--border-with) solid black;
+  background-color: var(--border-color);
+  border-radius: Calc(var(--border-radius) + 6px);
+  box-shadow: 0 0 3px 1px white;
+  color: black;
+  
+  >form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    >label {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      
+      >input {
+        color: white;
+        background-color: black;
+        border: var(--border-with) solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 2px;
+      }
+      
+      >input:focus {
+        border: none;
+        border-radius: Calc(var(--border-radius) - 3px);
+        outline: 2px solid #a8a8a8;
+      }
+    }
+    
+    >button {
+      color: var(--border-color);
+      border: none;
+      font-weight: bold;
+      background-color: black;
+      border-radius: Calc(var(--border-with) + 4px);
+    }
+  }
+  
+  >button {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border-radius: Calc(var(--border-with) + 4px);
+  }
+  
+  >button:hover i {
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px;
+    height: auto;
+  }
+  
+  >button:active i {
+    transform: scale(.9);
+  }
+}

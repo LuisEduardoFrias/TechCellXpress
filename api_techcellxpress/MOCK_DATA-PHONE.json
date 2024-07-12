@@ -1,0 +1,652 @@
+[
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "62826266262",
+    "brand": "Samsung",
+    "model": "Redmi Note 10",
+    "color": "Orange",
+    "capacity": {
+      "rom": 177,
+      "ramMemory": 13,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6263838",
+    "brand": "OnePlus",
+    "model": "iPhone 13",
+    "color": "Turquoise",
+    "capacity": {
+      "rom": 74,
+      "ramMemory": 3,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "618192",
+    "brand": "Xiaomi",
+    "model": "P40 Pro",
+    "color": "Orange",
+    "capacity": {
+      "rom": 164,
+      "ramMemory": 4,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "82919",
+    "brand": "Samsung",
+    "model": "OnePlus 9",
+    "color": "Green",
+    "capacity": {
+      "rom": 337,
+      "ramMemory": 11,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "63783",
+    "brand": "Xiaomi",
+    "model": "iPhone 13",
+    "color": "Yellow",
+    "capacity": {
+      "rom": 341,
+      "ramMemory": 3,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "0375",
+    "brand": "OnePlus",
+    "model": "OnePlus 9",
+    "color": "Red",
+    "capacity": {
+      "rom": 145,
+      "ramMemory": 12,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "15839",
+    "brand": "Xiaomi",
+    "model": "iPhone 13",
+    "color": "Indigo",
+    "capacity": {
+      "rom": 3,
+      "ramMemory": 15,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y73262",
+    "brand": "Samsung",
+    "model": "OnePlus 9",
+    "color": "Red",
+    "capacity": {
+      "rom": 270,
+      "ramMemory": 10,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "42427",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Crimson",
+    "capacity": {
+      "rom": 378,
+      "ramMemory": 6,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "628229y262",
+    "brand": "Apple",
+    "model": "Galaxy s23",
+    "color": "Green",
+    "capacity": {
+      "rom": 314,
+      "ramMemory": 15,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y26373862",
+    "brand": "Huawei",
+    "model": "Galaxy s23",
+    "color": "Mauv",
+    "capacity": {
+      "rom": 85,
+      "ramMemory": 0,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "62842522y262",
+    "brand": "Huawei",
+    "model": "Galaxy s23",
+    "color": "Fuscia",
+    "capacity": {
+      "rom": 329,
+      "ramMemory": 9,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y739292262",
+    "brand": "OnePlus",
+    "model": "OnePlus 9",
+    "color": "Crimson",
+    "capacity": {
+      "rom": 504,
+      "ramMemory": 4,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y539262",
+    "brand": "Samsung",
+    "model": "P40 Pro",
+    "color": "Yellow",
+    "capacity": {
+      "rom": 404,
+      "ramMemory": 13,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y252862",
+    "brand": "Huawei",
+    "model": "Galaxy s23",
+    "color": "Purple",
+    "capacity": {
+      "rom": 296,
+      "ramMemory": 4,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y258962",
+    "brand": "Apple",
+    "model": "Redmi Note 10",
+    "color": "Orange",
+    "capacity": {
+      "rom": 277,
+      "ramMemory": 14,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282451y262",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Indigo",
+    "capacity": {
+      "rom": 379,
+      "ramMemory": 9,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y5227262",
+    "brand": "Samsung",
+    "model": "P40 Pro",
+    "color": "Orange",
+    "capacity": {
+      "rom": 172,
+      "ramMemory": 8,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "2628",
+    "brand": "OnePlus",
+    "model": "OnePlus 9",
+    "color": "Yellow",
+    "capacity": {
+      "rom": 208,
+      "ramMemory": 10,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y7282262",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Fuscia",
+    "capacity": {
+      "rom": 385,
+      "ramMemory": 11,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "268293",
+    "brand": "Xiaomi",
+    "model": "iPhone 13",
+    "color": "Puce",
+    "capacity": {
+      "rom": 233,
+      "ramMemory": 11,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "2627",
+    "brand": "Huawei",
+    "model": "Redmi Note 10",
+    "color": "Crimson",
+    "capacity": {
+      "rom": 426,
+      "ramMemory": 15,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "8292",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "color": "Red",
+    "capacity": {
+      "rom": 103,
+      "ramMemory": 15,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "5262",
+    "brand": "Samsung",
+    "model": "OnePlus 9",
+    "color": "Khaki",
+    "capacity": {
+      "rom": 160,
+      "ramMemory": 7,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "252675",
+    "brand": "OnePlus",
+    "model": "Redmi Note 10",
+    "color": "Mauv",
+    "capacity": {
+      "rom": 412,
+      "ramMemory": 11,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "252425",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Turquoise",
+    "capacity": {
+      "rom": 86,
+      "ramMemory": 11,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "5252",
+    "brand": "Huawei",
+    "model": "Redmi Note 10",
+    "color": "Fuscia",
+    "capacity": {
+      "rom": 16,
+      "ramMemory": 16,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "4152",
+    "brand": "OnePlus",
+    "model": "Galaxy s23",
+    "color": "Orange",
+    "capacity": {
+      "rom": 219,
+      "ramMemory": 5,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "5152",
+    "brand": "OnePlus",
+    "model": "P40 Pro",
+    "color": "Goldenrod",
+    "capacity": {
+      "rom": 379,
+      "ramMemory": 8,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "1525",
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "color": "Teal",
+    "capacity": {
+      "rom": 428,
+      "ramMemory": 4,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "2526",
+    "brand": "Samsung",
+    "model": "P40 Pro",
+    "color": "Indigo",
+    "capacity": {
+      "rom": 292,
+      "ramMemory": 5,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "252395",
+    "brand": "Huawei",
+    "model": "OnePlus 9",
+    "color": "Pink",
+    "capacity": {
+      "rom": 223,
+      "ramMemory": 8,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "1515",
+    "brand": "Apple",
+    "model": "Redmi Note 10",
+    "color": "Khaki",
+    "capacity": {
+      "rom": 193,
+      "ramMemory": 7,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "7282",
+    "brand": "Samsung",
+    "model": "P40 Pro",
+    "color": "Fuscia",
+    "capacity": {
+      "rom": 276,
+      "ramMemory": 14,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "3783",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Yellow",
+    "capacity": {
+      "rom": 462,
+      "ramMemory": 3,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "363",
+    "brand": "OnePlus",
+    "model": "iPhone 13",
+    "color": "Violet",
+    "capacity": {
+      "rom": 123,
+      "ramMemory": 11,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "920",
+    "brand": "OnePlus",
+    "model": "OnePlus 9",
+    "color": "Pink",
+    "capacity": {
+      "rom": 444,
+      "ramMemory": 9,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "517",
+    "brand": "Apple",
+    "model": "P40 Pro",
+    "color": "Teal",
+    "capacity": {
+      "rom": 62,
+      "ramMemory": 15,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y266392",
+    "brand": "Huawei",
+    "model": "Redmi Note 10",
+    "color": "Puce",
+    "capacity": {
+      "rom": 278,
+      "ramMemory": 9,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "62416282y262",
+    "brand": "Samsung",
+    "model": "OnePlus 9",
+    "color": "Red",
+    "capacity": {
+      "rom": 232,
+      "ramMemory": 13,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "628241y262",
+    "brand": "Apple",
+    "model": "Redmi Note 10",
+    "color": "Orange",
+    "capacity": {
+      "rom": 28,
+      "ramMemory": 16,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "6282y29262",
+    "brand": "OnePlus",
+    "model": "Redmi Note 10",
+    "color": "Khaki",
+    "capacity": {
+      "rom": 218,
+      "ramMemory": 3,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "24892",
+    "brand": "Xiaomi",
+    "model": "OnePlus 9",
+    "color": "Crimson",
+    "capacity": {
+      "rom": 441,
+      "ramMemory": 12,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "582",
+    "brand": "OnePlus",
+    "model": "Redmi Note 10",
+    "color": "Pink",
+    "capacity": {
+      "rom": 224,
+      "ramMemory": 1,
+      "processor": "Procesador2"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "5383",
+    "brand": "Samsung",
+    "model": "OnePlus 9",
+    "color": "Turquoise",
+    "capacity": {
+      "rom": 295,
+      "ramMemory": 16,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "5280",
+    "brand": "Huawei",
+    "model": "Galaxy s23",
+    "color": "Blue",
+    "capacity": {
+      "rom": 388,
+      "ramMemory": 9,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "528268",
+    "brand": "Xiaomi",
+    "model": "P40 Pro",
+    "color": "Indigo",
+    "capacity": {
+      "rom": 114,
+      "ramMemory": 13,
+      "processor": "Procesador5"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "35700",
+    "brand": "Xiaomi",
+    "model": "Galaxy s23",
+    "color": "Aquamarine",
+    "capacity": {
+      "rom": 142,
+      "ramMemory": 2,
+      "processor": "Procesador1"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "389",
+    "brand": "Huawei",
+    "model": "OnePlus 9",
+    "color": "Red",
+    "capacity": {
+      "rom": 187,
+      "ramMemory": 16,
+      "processor": "Procesador3"
+    },
+    "releaseDate": "2/2/2022"
+  },
+  {
+    "imgUrl": "http://simplemachines.org/leo/rhoncus/sed.jsp?vel=at&est=dolor&donec=quis&odio=odio&justo=",
+    "imei": "2027",
+    "brand": "Samsung",
+    "model": "P40 Pro",
+    "color": "Khaki",
+    "capacity": {
+      "rom": 413,
+      "ramMemory": 14,
+      "processor": "Procesador4"
+    },
+    "releaseDate": "2/2/2022"
+  }
+]

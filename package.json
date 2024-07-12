@@ -1,0 +1,32 @@
+{
+  "name": "techcellxpress",
+  "version": "1.0.0",
+  "description": "Cell Phone Store Manager.",
+  "private": true,
+  "author": "luiseduardofrias",
+  "license": "ISC",
+  "scripts": {
+    "dev": "node --watch api_techcellxpress/src/index.js & next dev client_techcellxpress/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisEduardoFrias/TechCellXpress.git"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "nextjs"
+  ],
+  "workspaces": [
+    "api_techcellxpress",
+    "client_techcellxpress"
+  ],
+  "bugs": {
+    "url": "https://github.com/LuisEduardoFrias/TechCellXpress/issues"
+  },
+  "homepage": "https://github.com/LuisEduardoFrias/TechCellXpress#readme",
+  "dependencies": {
+    "@tanstack/react-table": "^8.19.2"
+  }
+}
