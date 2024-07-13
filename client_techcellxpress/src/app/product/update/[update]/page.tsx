@@ -1,13 +1,21 @@
 'use client'
+import { notFound } from 'next/navigation'
 import Auth from 'cp/auth';
 import 'st/update_product.css'
 
-export default function Add() {
+type Props = {
+  params: { id: string }
+}
+
+export default function Update({ params }: Props) {
+  const { id } = params;
+
+  if (!id) { }// notFound();
 
   return (
     <Auth>
       <dev className="container-update">
-        <h2>Add product</h2>
+        <h2>Update product</h2>
 
         <form action="">
           <fieldset>
@@ -61,8 +69,8 @@ export default function Add() {
               </div>
             </fieldset>
           </fieldset>
-
-          <button>Create</button>
+          
+          <button>Save</button>
         </form>
 
       </dev>

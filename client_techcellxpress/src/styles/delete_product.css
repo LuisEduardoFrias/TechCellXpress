@@ -1,0 +1,90 @@
+/**/
+.container-delete {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 60px 30px 40px 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    " . . ."
+    " img btn btn"
+    "img . data"
+    ". . .";
+
+  > h2 {
+    grid-area: title;
+    width: 100%;
+    text-align: center;
+  }
+
+  > div {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+  }
+
+  > button {
+    grid-area: btn;
+    width: 100px;
+    height: 25px;
+    justify-self: center;
+    border-radius: 3px;
+    background-color: red;
+  }
+
+  > div:last-child {
+    grid-area: data;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3px;
+
+    > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas: "titleDate textDate";
+
+      > span:nth-child(1) {
+        grid-area: titleDate;
+        font-weight: bold;
+        justify-self: flex-end;
+      }
+
+      > span:last-child {
+        grid-area: textDate;
+        justify-self: flex-start;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-delete {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 40px 1fr 10px 1fr 1fr;
+    grid-template-areas:
+      "title"
+      "btn"
+      "img"
+      "."
+      "data"
+      ".";
+    
+    > button {
+      justify-self: flex-end;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import useStore from "str/store";
 import useFetch, { FetchObj, Method, Result } from 'hk/use_fetch';
 import { useRouter, usePathname } from 'next/navigation';
 import MenuSvg from 'sv/menu_svg'
+import 'st/menu.css';
 
 export default function Menu() {
   const [setFetch, data, loading] = useFetch(process.env.NEXT_PUBLIC_API_TECHCELLXPRESS);
@@ -33,23 +34,23 @@ export default function Menu() {
     <>
       {
         session &&
-        <nav>
+        <nav className="menu_bar">
           <button onClick={() => setShow(!show)}>
             <MenuSvg />
           </button>
           {show &&
             <ul>
               {path !== '/' &&
-                <li onClick={() => handleClick('/')}>home</li>
+                <li onClick={() => handleClick('/')}>Home</li>
               }
               {path !== '/product/add' &&
                 <li onClick={() => handleClick('/product/add')}>Add phone</li>
               }
-              {path !== '/product' &&
-                <li onClick={() => handleClick('/product')}>List phone</li>
+              {path !== '/products' &&
+                <li onClick={() => handleClick('/products')}>List phone</li>
               }
-              {path !== '/recors' &&
-                <li onClick={() => handleClick('/recors')}>Admin</li>
+              {path !== '/admin' &&
+                <li onClick={() => handleClick('/admin')}>Admin</li>
               }
               <li onClick={() => handleLogout()}>Logout</li>
             </ul>

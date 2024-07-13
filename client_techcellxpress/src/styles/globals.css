@@ -119,59 +119,6 @@ header {
   align-items: center;
   gap: 10px;
   
-  
-  >nav {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-    
-    >button {
-      border-radius: 8px;
-      height: 40px;
-      
-      &:active {
-        transform: scale(.9);
-      }
-    }
-    
-    
-    >ul {
-      position: absolute;
-      top: 45px;
-      width: 100px;
-      background-color: #c2fcf8;
-      list-style: none;
-      padding-block: 5px;
-      border: 1px solid black;
-      box-shadow: 0 0 3px 1px #919191;
-      
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      z-index: 9;
-      
-      >li {
-        text-align: center;
-        font-weight: bold;
-        width: 100%;
-        color: black;
-        border-inline-width: 0;
-        padding: 2px 5px;
-        background-color: #16a99a;
-        user-select: none;
-      }
-      
-      >li:hover {
-        background-color: #066d6b;
-      }
-      
-      >li:active {
-        transform: scale(.9);
-      }
-    }
-  }
-  
   >h1 {
     text-align: center;
     background-color: #16ffec46;

@@ -1,10 +1,12 @@
 //
 'use client'
+import { useRouter } from 'next/navigation'
 import Auth from 'cp/auth'
 import Table from 'cp/table'
 import 'st/products.css'
 
 export default function Products() {
+  const router = useRouter()
   const headers = [
     "IMEI", "IMAGE URL", "BRAND", "MODEL", "COLOR", "CAPACITY", "RELEASE DATE"
   ];
@@ -12,7 +14,7 @@ export default function Products() {
   const data = [
     {
       imei: 123456789012345,
-      imgUrl: 'imagen1.jpg',
+      imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=',
       brand: 'Samsung',
       model: 'Galaxy S20',
       color: 'Black',
@@ -103,11 +105,11 @@ export default function Products() {
   ];
 
   function handlerDelete(id) {
-    alert("delete: " + id)
+    router.push(`/product/delete/${id}`)
   }
 
   function handlerUpdate(id) {
-    alert("update: " + id)
+    router.push(`/product/update/${id}`)
   }
 
   return (
