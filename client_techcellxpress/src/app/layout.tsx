@@ -27,6 +27,11 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <footer>
+          <a
+            href="https://icons8.com/icon/DoFiicbRPzDS/página-no-encontrada">página
+            no encontrada</a> icon by <a href="https://icons8.com">Icons8</a>
+        </footer>
       </body>
     </html>
   )
