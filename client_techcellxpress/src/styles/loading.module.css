@@ -9,9 +9,9 @@
   z-index: 99;
   background-color: transparent;
   display: block;
-  border: 8px double var(--border-color);
-  border-inline-end: 6px double var(--border-color);
-  border-block-end: 6px double var(--border-color);
+  border: 8px double #01b4ab;
+  border-inline-end: 6px double #028b83;
+  border-block-end: 6px double #014f4b;
   border-inline-start: 10px double transparent;
   border-radius: 50%;
   animation: ld-dual-ring 1.2s ease-in-out infinite backwards;

@@ -16,7 +16,7 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #9fb4c0;
+  background-color: #a8f6fe;
   color: black;
   
   display: flex;
@@ -43,8 +43,14 @@ input {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  background-color: black;
+  color: white;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #a9a9a9;
 }
 
 fieldset {
@@ -52,7 +58,7 @@ fieldset {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #e7e7e795;
+  background-color: #ffffff;
   backdrop-filter: blur(5px);
 }
 

@@ -11,7 +11,7 @@ type TableProps = {
 }
 
 export default function Table({ data, headers = [], handlerDelete, handlerUpdate }: TableProps) {
- const [pageSize, setPageSize] = useState(5);
+  const [pageSize, setPageSize] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleChangePageSize = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,11 +19,11 @@ export default function Table({ data, headers = [], handlerDelete, handlerUpdate
     setCurrentPage(1);
   };
 
-  const totalPages = Math.ceil(data.length / pageSize);
-  const paginatedData = data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const totalPages = Math.ceil(data?.length / pageSize);
+  const paginatedData = data?.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   const renderHeaders = () => {
-    if (headers.length === 0 && data.length > 0) {
+    if (headers.length === 0 && data?.length > 0) {
       return Object.keys(data[0]).map((key) => (
         <th key={key}>{key}</th>
       ));
@@ -57,11 +57,11 @@ export default function Table({ data, headers = [], handlerDelete, handlerUpdate
           </tr>
         </thead>
         <tbody>
-          {renderRows()}
+          {data ? renderRows() : <span>Not Data</span>}
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={Object.keys(data[0]).length + (handlerDelete && handlerUpdate ? 2 : 0)}>
+            <td colSpan={Object.keys(data ? data[0] : {}).length + (handlerDelete && handlerUpdate ? 2 : 0)}>
               <input type="number" value={pageSize} onChange={handleChangePageSize} />
               <span> Page {currentPage} of {totalPages} </span>
               <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>

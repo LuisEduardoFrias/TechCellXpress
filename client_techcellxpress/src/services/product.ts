@@ -56,4 +56,4 @@ class Product {
   }
 }
 
-export default newProduct();
+export default new Product();

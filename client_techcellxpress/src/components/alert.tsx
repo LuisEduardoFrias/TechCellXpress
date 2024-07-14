@@ -17,31 +17,33 @@ export enum variantType {
   outlined = 'outlined',
 }
 
+export type DataAlert = {
+  color: aletType;
+  severity: aletType;
+  message: string;
+  variant?: variantType;
+}
+
 type AlertProps = {
   show: boolean;
+  dataAlert: DataAlert;
   exe?: () => void;
-  alertData: {
-    color: aletType;
-    severity: aletType;
-    message: string;
-    variant?: variantType;
-  };
 };
 
-export default function Alert({ show, exe, alertData }: AlertProps) {
+export default function Alert({ show, exe, dataAlert }: AlertProps) {
   const [visible, setVisible] = useState(show);
 
-  if (!alertData.variant) alertData.variant = variantType.outlined;
+  if (!dataAlert.variant) dataAlert.variant = variantType.outlined;
 
   const color =
-    alertData.variant == variantType.filled ? 'white' :
-      (alertData.color == aletType.info ? 'blue' :
-        alertData.color == aletType.success ? 'green' :
+    dataAlert.variant == variantType.filled ? 'white' :
+      (dataAlert.color == aletType.info ? 'blue' :
+        dataAlert.color == aletType.success ? 'green' :
           'red');
 
   const borderColor =
-    alertData.severity == aletType.info ? 'blue' :
-      alertData.severity == aletType.success ? 'green' :
+    dataAlert.severity == aletType.info ? 'blue' :
+      dataAlert.severity == aletType.success ? 'green' :
         'red';
 
   useEffect(() => {
@@ -62,7 +64,7 @@ export default function Alert({ show, exe, alertData }: AlertProps) {
     color: color,
     border: `2px solid ${borderColor}`,
     backgroundColor:
-      alertData.variant == variantType.filled ? borderColor : 'transparent',
+      dataAlert.variant == variantType.filled ? borderColor : 'transparent',
   };
 
   return (
@@ -71,21 +73,26 @@ export default function Alert({ show, exe, alertData }: AlertProps) {
       className='Alert'>
       <div className='alert-header'>
         {
-          alertData.severity === aletType.success ?
+          dataAlert.severity === aletType.success ?
             <SuccesSvg /> :
-            alertData.severity === aletType.error ?
+            dataAlert.severity === aletType.error ?
               <ErrorSvg /> :
-              alertData.severity === aletType.info ?
+              dataAlert.severity === aletType.info ?
                 <InfoSvg /> : null
         }
-        <label>{firstUC(alertData.severity)}</label>
+        <label>{firstUC(dataAlert.severity)}</label>
       </div>
-      {firstUC(alertData.message)}
+      {firstUC(dataAlert.message)}
     </div>
   );
 }
 
 function firstUC(text) {
   if (!text) return text;
+  try{
   return text?.charAt(0).toUpperCase() + text?.slice(1);
+  }catch(error){
+    console.error(error);
+    return text;
+  }
 }

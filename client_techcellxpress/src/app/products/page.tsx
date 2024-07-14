@@ -1,17 +1,33 @@
 //
 'use client'
 import { useRouter } from 'next/navigation'
-import Auth from 'cp/auth'
+import { useState, useEffect } from 'react';
+import Product from 'svc/product'
 import Table from 'cp/table'
 import 'st/products.css'
 
 export default function Products() {
+  const [dataProduct, setDataProduct] = useState(null)
   const router = useRouter()
+
   const headers = [
     "IMEI", "IMAGE URL", "BRAND", "MODEL", "COLOR", "CAPACITY", "RELEASE DATE"
   ];
 
-  const data = [
+  useEffect(() => {
+    (async () => {
+      const { error, data } = await Product.get(getCookie("access_token"))
+
+      if (error) {
+        //alert
+        return;
+      }
+
+      setDataProduct(data)
+    })()
+  }, [])
+
+  const datga = [
     {
       imei: 123456789012345,
       imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=',
@@ -111,18 +127,20 @@ export default function Products() {
   function handlerUpdate(id) {
     router.push(`/product/update/${id}`)
   }
+  
+  function handleAddProduct() {
+    router.push(`/product/add`)
+  }
 
   return (
-    <Auth>
-      <div className="container-products" >
-        <h2>Products</h2>
-        <button>add new phone</button>
-        <Table
-          data={data}
-          headers={headers}
-          handlerDelete={handlerDelete}
-          handlerUpdate={handlerUpdate} />
-      </div>
-    </Auth>
+    <div className="container-products" >
+      <h2>Products</h2>
+      <button onClick={handleAddProduct}>add new phone</button>
+      <Table
+        data={dataProduct}
+        headers={headers}
+        handlerDelete={handlerDelete}
+        handlerUpdate={handlerUpdate} />
+    </div>
   )
 }

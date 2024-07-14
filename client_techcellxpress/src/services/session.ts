@@ -3,15 +3,13 @@ import Fetch, { Method, DataFetch } from "../helpers/fetch"
 import { session } from '../helpers/api_router'
 
 class Session {
-  async logIn(user, token) {
+  async logIn(user) {
     const datafetch: DataFetch = {
       url: session.logIn,
       method: Method.POST,
       body: user,
-      token: token,
     }
-
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async logOut(session, token) {
@@ -22,18 +20,25 @@ class Session {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
-  async register(user, token) {
+  async register(user) {
     const datafetch: DataFetch = {
       url: session.register,
       method: Method.POST,
       body: user,
-      token: token,
     }
 
     const { error, data } = await Fetch(datafetch);
+
+    if (error)
+      return { error, data: null }
+
+    if (user.user === data.user && user.email === data.email)
+      return { error: null, data: "Succes" }
+
+    return { error: 'unidentified error.', data: null }
   }
 }
 

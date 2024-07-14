@@ -2,14 +2,14 @@
 'use client'
 import { useState } from 'react'
 import useStore from "str/store";
-import useFetch, { FetchObj, Method, Result } from 'hk/use_fetch';
+import Session from 'svc/session';
+import { getCookie, setCookie } from 'hp/local_cookie';
 import { useRouter, usePathname } from 'next/navigation';
-import MenuSvg from 'sv/menu_svg'
+import MenuSvg from 'sv/menu_svg';
 import 'st/menu.css';
 
 export default function Menu() {
-  const [setFetch, data, loading] = useFetch(process.env.NEXT_PUBLIC_API_TECHCELLXPRESS);
-  const session = useStore((state) => state.session)
+  const { session, showMenu } = useStore((state) => ({ session: state.session, showMenu: state.showMenu }))
   const [show, setShow] = useState(false);
   const router = useRouter();
   const path = usePathname();
@@ -20,25 +20,28 @@ export default function Menu() {
   }
 
   function handleLogout(url: string) {
+
     const user = {
       id: session.id,
       user: session.user,
       email: session.email,
     };
 
-    setFetch({ url: '/logout', method: Method.POST, body: { user } });
+    Session.logOut(user, getCookie("access_token"));
+    setCookie("access_token", null)
     setShow(!show)
   }
 
   return (
     <>
       {
-        session &&
-        <nav className="menu_bar">
+        showMenu &&
+        <div className="menu_bar">
           <button onClick={() => setShow(!show)}>
             <MenuSvg />
           </button>
-          {show &&
+
+          <nav style={{ right: !show && '-400px' }}>
             <ul>
               {path !== '/' &&
                 <li onClick={() => handleClick('/')}>Home</li>
@@ -54,8 +57,9 @@ export default function Menu() {
               }
               <li onClick={() => handleLogout()}>Logout</li>
             </ul>
-          }
-        </nav>
+
+          </nav>
+        </div>
       }
     </>
   )

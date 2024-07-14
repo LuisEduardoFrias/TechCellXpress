@@ -1,89 +1,96 @@
 //
-'use client'
+"use client"
 import { useState, useEffect, useRef, ReactElement } from 'react';
-import Alert, { aletType, variantType } from './alert';
-import useFetch, { Method } from 'hk/use_fetch';
+import Alert, { aletType, variantType, DataAlert } from './alert';
 import Loading from 'cp/loading';
 
-export { Method };
-
-export type DataResult = {
+type DataResult = {
   error: any,
   data: any,
 }
 
 export type ValidationResult = {
-  isEmpty: boolean,
-  message: string,
+  enable: boolean,
+  message: string
 }
 
 type TFormProps<T> = {
-  url: string,
-  method: Method,
-  validationEmptyFild: (obj: T, data: DataResult) => ValidationResult,
+  service: (value: T) => DataResult,
+  validateFields: (obj: T, data: DataResult) => ValidationResult,
   children: ReactElement
-  fetchResult?: (data: DataResult) => void,
 }
 
-export default function Form<T>({ url, method, validationEmptyFild, fetchResult, children }: TFormProps<T>) {
-  const [setFetch, data, loading] = useFetch(process.env.NEXT_PUBLIC_API_TECHCELLXPRESS);
-  const [validation, setValidation] = useState({ isEmpty: false, message: "" });
-  const [result, setResult] = useState(data);
-  const formRef = null;
-  const show = validation.isEmpty || result.data || result.error;
+const defaultDataAlert: DataAlert = {
+  color: aletType.info,
+  severity: aletType.info,
+  message: "",
+  variant: variantType.filled,
+};
 
-  useEffect(() => {
+export default function Form<T>({ validateFields, service, children }: TFormProps<T>) {
+  const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState({ enable: false, data: defaultDataAlert });
 
-    if (data.data) {
-      //formRef?.current.reset();
-    }
-
-    if (typeof fetchResult === 'function')
-      fetchResult(data);
-
-    setResult(data)
-
-  }, [data])
-
-  const alertData = {
-    color:
-      (validation.isEmpty && aletType.info) ||
-      (result.data && aletType.success) ||
-      (result.error && aletType.error),
-    severity:
-      (validation.isEmpty && aletType.info) ||
-      (result.data && aletType.success) ||
-      (result.error && aletType.error),
-    message:
-      result.error ? result.error :
-        result.data ? 'Success' :
-          validation.message,
-    variant: variantType.filled,
-  };
-
-  function handlerSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handlerSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.target);
+
 
     const formDataObject = {};
     formData.forEach((value, key) => {
       formDataObject[key] = value;
     });
 
-    const validationResult: ValidationResult = validationEmptyFild(formDataObject as T);
-    if (validationResult) {
-      setValidation(validationResult);
-      setResult({ error: null, data: null })
+    const _validateFields: ValidationResult = validateFields(formDataObject as T);
+    if (_validateFields && _validateFields.enable) {
+      setAlert({
+        enable: true, data: {
+          color: aletType.info,
+          severity: aletType.info,
+          message: _validateFields.message,
+          variant: variantType.filled,
+        }
+      })
       return;
     }
 
-    setFetch({
-      url: url,
-      method: method,
-      body: formDataObject,
-    });
+    setLoading(true);
+
+    const { error, data } = await service(formDataObject as T)
+    
+    setLoading(false)
+
+    if (error) {
+      setAlert({
+        enable: true, data: {
+          color: aletType.error,
+          severity: aletType.error,
+          message: error,
+          variant: variantType.filled,
+        }
+      })
+      return;
+    }
+
+    setAlert({
+      enable: true, data: {
+        color: aletType.success,
+        severity: aletType.success,
+        message: data,
+        variant: variantType.filled,
+      }
+    })
+
+
+
   }
 
+  const StyleForm = {
+    padding: '5px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px'
+  }
   const StyleFacade = {
     position: 'absolute',
     top: '0',
@@ -102,44 +109,53 @@ export default function Form<T>({ url, method, validationEmptyFild, fetchResult,
     backdropFilter: 'blur(.9px)',
     transition: 'width 1.5 ease, height 1.5s ease, opacity 2s ease',
   }
-
   const StyleAlert = {
     position: 'absolute',
-    top: '-60px',
+    top: '10px',
     left: '50%',
+    zIndex: '99999',
     transform: 'translateX(-50%)',
     width: '100%',
+  }
+  const StyleLoading = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    zIndex: '9999',
+    transform: 'translate(-50%,-50%)',
+    display: 'grid',
+    placeContent: 'center'
   }
 
   return (
     <>
-      {loading && <Loading />}
+    <form onSubmit={handlerSubmit} style={StyleForm}>
+      <div style={StyleFacade}></div>
+
+      <div style={StyleLoading}>
+        {loading && <Loading />}
+      </div>
+
       <div style={StyleAlert}>
         <Alert
           key='Alert'
-          show={show}
-          alertData={alertData}
+          show={alert.enable}
+          dataAlert={alert.data}
           exe={() => {
-            setValidation({ isEmpty: false, message: "" });
+            setAlert({ enable: false, data: defaultDataAlert });
           }}
         />
       </div>
-      <form ref={formRef} onSubmit={handlerSubmit} style={{
-        display: 'flex',
-        padding: '5px',
-        paddingTop: loading ? '40px' : '',
-        flexDirection: 'column',
-        gap: '10px'
-      }}>
-        <div style={StyleFacade}></div>
-        {children}
-        <button
-          disabled={loading}
-          type='submit'
-          className='btn'>
-          Send
-        </button>
-      </form>
+
+      {children}
+
+      <button
+        disabled={loading}
+        type='submit'
+        className='btn'>
+        Send
+      </button>
+    </form>
     </>
   )
 }

@@ -1,40 +1,35 @@
 //
 'use client'
-import { EventForm } from 'react'
-import Form, { DataResult, Method, ValidationResult } from 'cp/form.tsx';
+///
+import Form, { ValidationResult } from 'cp/form.tsx';
 import { useRouter } from 'next/navigation';
+import Session from 'svc/session'
+import type UserModel from '../../../../../cross_techcellxpress/models/user_model.js'
 import 'st/register.css'
 
 export default function Register() {
   const rauter = useRouter();
 
-  type User = {
-    name: string,
-    lastName: string,
-    email: string,
-    user: string,
-    password: string,
-    confirmPassword: string
-  }
+  type User = { confirmPassword: string } & UserModel;
 
   //I could have used react-hook-form to validate the fields.
   function handlervalidation(obj: User): ValidationResult {
     if (!obj.name || !obj.lastName || !obj.email || !obj.user || !obj.password || !obj.confirmPassword)
-      return { isEmpty: true, message: "Campos requeridos." };
+      return { enable: true, message: "Campos requeridos." };
 
     if (obj.password != obj.confirmPassword)
-      return { isEmpty: true, message: "Password and Confirm Password are not the same." };
+      return { enable: true, message: "Password and Confirm Password are not the same." };
 
     if (obj.password.length < 8)
-      return { isEmpty: true, message: "Password length is less than 8." };
+      return { enable: true, message: "Password length is less than 8." };
   }
 
   return (
     <div className="container-register">
       <Form<User>
-        url={'/register'}
-        method={Method.POST}
-        validationEmptyFild={handlervalidation} >
+        service={async (da: User) => await Session.register(da)}
+        validateFields={handlervalidation} >
+
         <label>Name *
           <input type="text" name="name" placeholder="Juan Carlos" />
         </label>
@@ -55,7 +50,7 @@ export default function Register() {
         </label>
       </Form>
 
-      <button onClick={() => rauter.push('/auth/login')}>
+      <button onClick={() => rauter.push('/login')}>
         <i>
           login
         </i>

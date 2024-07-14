@@ -4,10 +4,10 @@ import { GlobalState } from 'md/global_state'
 
 const useStore = create<GlobalState>((set) => ({
   session: null,
-  phones: null,
+  showMenu: false,
   //
+  changeVisibilityMenu: () => set((state) => ({ showMenu: true })),
   login: (user) => set((state) => ({ session: user })),
-  savePhone: (_phones) => set((state) => ({ phones: _phones })),
 }))
 
 export default useStore;

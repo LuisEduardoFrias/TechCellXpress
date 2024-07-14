@@ -1,36 +1,39 @@
 //
 'use client'
 import { useState, useEffect, ReactElement } from 'react';
-import useStore from "str/store";
-import { getCookie } from 'hk/use_local_cookie';
-import { useRouter } from 'next/navigation';
+import { useStore } from 'hk/use_storage';
+import { useRouter, usePathname } from 'next/navigation';
 import Loading from 'cp/loading';
 
 export default function Auth({ children }: { children: ReactElement }) {
-  const { session, login } = useStore((state) => ({ session: state.session, login: state.login }))
-  const [isloadin, setLoadin] = useState(true)
-  const router = useRouter();
-
-  useEffect(() => {
-    const access_session = getCookie("access_token");
-
-    if (access_session) {
-
-      if (!session) {
-        login(access_session);
+  /*
+    const session = useStore('sessionStorage', { key: 'session' });
+    const [isloadin, setLoadin] = useState(true)
+    const router = useRouter();
+    const path = usePathname();
+  
+    useEffect(() => {
+      if (path !== '/session/login' && path !== '/session/register') {
+        if (session?.user) {
+          alert("auth value: " + JSON.stringify(session))
+          // console.info("Session: " + JSON.string(session))
+          setLoadin(false)
+        } else {
+      alert(path)
+          router.push('/session/login')
+        }
+      } else {
+        setLoadin(false)
       }
-
-      setLoadin(false)
-    } else {
-      router.push('/auth/login')
-    }
-  }, [])
-
-  return (
-    <>
-      {
-        isloadin ? <Loading /> : children
-      }
-    </>
-  )
+    }, [])
+  
+    return (
+      <>
+        {
+          isloadin ? <Loading /> : children
+        }
+      </>
+    )
+  */
+  return null
 }

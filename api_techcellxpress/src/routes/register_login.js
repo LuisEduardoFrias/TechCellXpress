@@ -1,7 +1,7 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import sequelize from '../libs/db.js';
-
+import { serialize } from 'cookie';
 import configCookies from '../config_cookies.js';
 import RegisterLogin from '../controllers/register_login_controller.js';
 import middlewares from '../middlewares.js';
@@ -92,7 +92,14 @@ router.post('/login', async (req, res) => {
 
     console.log(`Authorization token: ${token}`);
 
-    res.cookie('access_token', token, configCookies).send({ ...data, token });
+    /* const serialized = serialize('access_token', token, configCookies)
+     res.setHeader('Set-Cookie', serialized)
+     return res.json({ ...data, token });*/
+
+    res.cookie('access_token', token, configCookies)
+    .status(200)
+    .json({ error, data: { ...data, token } });
+
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: "Server error.", data: null });
@@ -113,9 +120,15 @@ router.post('/login', async (req, res) => {
 *             type: object
 *             properties:
 *               user:
-*                 type: string
-*               password:
-*                 type: string
+*               type: string
+*             password:
+*               type: string
+*       cookies:
+*         access_token:
+*           description: Token de acceso
+*           schema:
+*             type: string
+*           example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibm90IGZvdW5kIn0.1wG3L5JW8wOeMfztk1X7hg'
 *     responses:
 *       200:
 *         description: Success.
@@ -136,9 +149,9 @@ router.post('/logout', middlewares, async (req, res) => {
       return;
     }
 
-    res.cookie('access_token', null, configCookies).status(200).send({ message: 'Success' });
+    res.cookie('access_token', null, { ...configCookies, maxAge: 0 }).status(200).send({ message: 'Success' });
   } catch (error) {
-    console.error(error)
+    console.error(error);
     res.status(500).json({ error: "Server error.", data: null });
   }
 });

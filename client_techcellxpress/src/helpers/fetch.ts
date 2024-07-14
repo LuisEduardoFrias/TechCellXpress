@@ -18,31 +18,25 @@ export type DataFetch = {
   token?: string
 };
 
-export default function Fetch(datafetch: DataFetch) {
-  const _dataFetch: DataFetch = {
-    url: datafetch.url,
-    method: datafetch.method || Method.GET,
-    body: datafetch.body,
-    token: datafetch.token
-  }
-
-  return _fetch(_dataFetch)
+export default async function Fetch(datafetch: DataFetch) {
+  return await _fetch(datafetch)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Error al recuperar el HTML');
+        console.error('Error retrieving data.');
+        return { error: 'Error retrieving data.', data: null };
       }
 
       const contentType = response.headers.get('content-type');
 
-      if (contentType && contentType.includes('application/json')) {
-        return response.json();
-      } else {
-        return response.text();
-      }
+      return response.json();
+      /* if (contentType && contentType.includes('application/json')) {
+         return response.json();
+       } else {
+         return response.text();
+       }
+       */
     })
-    .then((data) => {
-      return { error: null, data }
-    })
+    .then((data) => data)
     .catch((error) => {
       console.log('helper fetch: ', error);
       return { error, data: null }
@@ -60,7 +54,7 @@ async function _fetch(datafetch: DataFetch) {
   }
 
   return await fetch(datafetch.url, {
-    method: datafetch.method && Method.GET,
+    method: datafetch.method ?? Method.GET,
     mode: 'cors',
     cache: 'no-cache',
     credentials: 'same-origin',
