@@ -1,20 +1,21 @@
 //
 import { login, logout, register, selectBy } from '../repositories/session_repository.js';
-import User from '../models/user_model.js';
-import UserDto from '../dtos/user_dto.js';
+import User from '../../../cross_techcellxpress/models/user_model.mjs';
+import UserDto from '../../../cross_techcellxpress/dtos/user_dto.mjs';
+import { hashPassword, comparePasswords } from '../helpers/encypt.js';
 
 export default class RegisterLogin {
 
   static async login(user, password) {
     const result = await login(user);
 
-    //compare passwords encrypted using bcrypt
-    //return { error: "Incorrect password", data: null };
-
     if (!result)
       return { error: "user not found", data: null };
 
-    return { error: null, data: new UserDto(result) };
+    if (await comparePasswords(password, result.password))
+      return { error: null, data: UserDto.mapper(result) };
+
+    return { error: "Incorrect password", data: null };
   }
   //
   static async logout(user) {
@@ -35,8 +36,11 @@ export default class RegisterLogin {
     if (findUser)
       return { error: "The user exists.", data: null };
 
-    const result = await register(new User(_register));
+    const user = User.mapper(_register);
+    user.password = await hashPassword(user.password);
 
-    return { error: null, data: new UserDto(result) };
+    const result = await register(user);
+
+    return { error: null, data: UserDto.mapper(result) };
   }
 }

@@ -3,10 +3,17 @@
   border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
+  color: var(--font-color1);
 }
 
+#tridente-table thead tr th {
+  background-color: var(--theme-0);
+}
+
+
 #tridente-table th {
-  background-color: #f2f2f2;
+  background-color: var(--theme-bg1);
+  ;
   color: #333;
   font-weight: bold;
 }
@@ -34,11 +41,12 @@ tr.selected {
 }
 
 #tridente-table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
+  background-color: var(--theme-bg1);
 }
 
 #tridente-table tbody tr:nth-child(even) {
-  background-color: #f5f5f5;
+  background-color: var(--theme-bg1);
+  ;
 }
 
 .btn {
@@ -66,4 +74,37 @@ tr.selected {
 
 .btn:active {
   transform: scale(0.9);
+}
+
+tfoot,
+tr,
+td {
+  width: 100%;
+}
+
+tfoot tr td {
+  --margin-rigth: 15px;
+  color: var(--font-color1);
+  background-color: var(--theme-9th);
+  height: 50px;
+  
+  >input {
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    margin-inline-end: var(--margin-rigth);
+  }
+  
+  >span {
+    font-weight: 500;
+    margin-inline-end: var(--margin-rigth);
+  }
+  
+  >button {
+    margin-inline-end: var(--margin-rigth);
+    background-color: var(--theme-bg);
+    color: var(--font-color);
+    padding: 3px;
+    border-radius: 6px;
+  }
 }

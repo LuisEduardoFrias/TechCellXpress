@@ -3,8 +3,8 @@ Cell Phone Store Manager.
 
 ## Requires node v22.2.0
 ## Execute the command in the root folder --> 'npm run dev'
-## Test user --> luise
-## Test pass --> luise
+## Test user --> luisf
+## Test pass --> luisf
 
 ---------------------------------------
 

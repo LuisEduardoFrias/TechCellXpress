@@ -1,11 +1,21 @@
 //
 import Fetch, { Method, DataFetch } from "../helpers/fetch"
-import { product } from '../helpers/api_router'
+import { product as pdt } from '../helpers/api_router'
 
 class Product {
   async get(token) {
     const datafetch: DataFetch = {
-      url: product.get,
+      url: pdt.get,
+      method: Method.GET,
+      token: token,
+    }
+
+    return await Fetch(datafetch);
+  }
+  //
+  async search(text, token) {
+    const datafetch: DataFetch = {
+      url: pdt.search.replace('{search}', text),
       method: Method.GET,
       token: token,
     }
@@ -15,7 +25,7 @@ class Product {
   //
   async getById(id, token) {
     const datafetch: DataFetch = {
-      url: product.getById.replace('{id}', id),
+      url: pdt.getById.replace('{id}', id),
       method: Method.GET,
       token: token,
     }
@@ -26,18 +36,20 @@ class Product {
   async post(product, token) {
 
     const datafetch: DataFetch = {
-      url: product.post,
+      url: pdt.post,
       method: Method.POST,
       body: product,
       token: token,
     }
 
-    return await Fetch(datafetch);
+    const { error, data } = await Fetch(datafetch);
+    console.log("error: ", error, "data: ", data);
+    return { error, data };
   }
   //
   async put(id, product, token) {
     const datafetch: DataFetch = {
-      url: product.put.replace('{id}', id),
+      url: pdt.put.replace('{id}', id),
       method: Method.PUT,
       body: product,
       token: token,
@@ -48,7 +60,7 @@ class Product {
   //
   async delete(id, token) {
     const datafetch: DataFetch = {
-      url: product.delete.replace('{id}', id),
+      url: pdt.delete.replace('{id}', id),
       method: Method.DELETE,
       token: token,
     }

@@ -1,14 +1,13 @@
 //
 'use client'
-import { singIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation';
 import { setCookie } from 'hp/local_cookie';
 import useStorage from 'hk/use_storage';
 import useStore from 'str/store';
 import Form, { ValidationResult } from 'cp/form.tsx';
-import Session from 'svc/session'
+import SessionSerice from 'svc/session'
 
-import 'st/register.css'
+import 'st/login_register.css'
 
 export default function Login() {
   const login = useStore((state) => state.login)
@@ -20,8 +19,8 @@ export default function Login() {
     password: string,
   }
 
-  async function handlerServer(da: User) {
-    const { error, data } = await Session.logIn(da);
+  async function handlerService(da: User) {
+    const { error, data } = await SessionSerice.logIn(da);
 
     if (error) return { error, data }
 
@@ -32,18 +31,21 @@ export default function Login() {
     return { error, data: "Success" };
   }
 
-  /*
-  I could have used react-hook-form to validate the fields.
+  //I could have used react - hook - form to validate the fields.
   function handlervalidation(obj: User): ValidationResult {
+    if (!obj.user)
+      return { enable: true, message: "User is requiered!" };
+    if (!obj.password)
+      return { enable: true, message: "Password is requiered!" };
+
     return { enable: false, message: "" };
   }
-  */
 
   return (
-    <div className="container-register">
+    <div className="container-login_register">
       <Form<User>
-        service={handlerServer} >
-        {/*validateFields={handlervalidation} >*/} 
+        service={handlerService}
+        validateFields={handlervalidation} >
         <label >User *
           <input type="text" name="user" placeholder="Juan316" />
         </label>

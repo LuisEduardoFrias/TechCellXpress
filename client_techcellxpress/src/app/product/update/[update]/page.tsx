@@ -7,7 +7,7 @@ import Loading from 'cp/loading'
 import PhoneModel, { CapacityModel } from '../../../../../../cross_techcellxpress/models/phone_model.js'
 import Form, { ValidationResult } from 'cp/form.tsx';
 import Product from 'svc/product'
-import 'st/update_product.css'
+import 'st/add_update_product.css'
 
 export default function Update() {
   const [product, setProduct] = useState(null)
@@ -69,7 +69,7 @@ export default function Update() {
   }
 
   return (
-    <dev className="container-update">
+    <dev className="container-add-update">
       <h2>Update product</h2>
 
       <Form<User>

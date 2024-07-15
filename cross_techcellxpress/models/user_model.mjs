@@ -1,5 +1,5 @@
 //
-import BaseModel from './base_model.js';
+import BaseModel from './base_model.mjs';
 
 export default class UserModel extends BaseModel {
   constructor(name, lastName, email, user, password) {

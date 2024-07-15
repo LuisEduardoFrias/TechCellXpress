@@ -14,7 +14,7 @@ router.use(middlewares);
 //
 router.post('/load_products', async (req, res) => {
   const phone = req.body;
-  
+
   try {
     const { error, data } = await Admin.loadProducts(phone);
 
@@ -55,7 +55,7 @@ router.post('/load_products', async (req, res) => {
 *         description: Internal server error.
 
 */
-//
+/*
 router.delete('/removeAll', async (req, res) => {
   try {
     const { error, data } = await Admin.removeAll();
@@ -71,6 +71,7 @@ router.delete('/removeAll', async (req, res) => {
     res.status(500).json({ error: "Server error.", data: null });
   }
 });
+*/
 /**
 * @swagger
 * /admin/removeAll:

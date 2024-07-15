@@ -1,5 +1,5 @@
 //
-import BaseModel from '../models/bose_model.js';
+import BaseModel from '../models/base_model.mjs';
 
 export class CapacityDto extends BaseModel {
   constructor(rom, ramMemory, processor, processorSpeed) {

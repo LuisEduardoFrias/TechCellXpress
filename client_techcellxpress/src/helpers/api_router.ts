@@ -10,6 +10,7 @@ export const admin = {
 
 export const product = {
   get: `${base}/product`,
+  search: `${base}/product/search/{search}`,
   getById: `${base}/product/{id}`,
   post: `${base}/product`,
   put: `${base}/product/{id}`,

@@ -1,5 +1,5 @@
 //
-import BaseModel from './base_model.js';
+import BaseModel from './base_model.mjs';
 
 export class CapacityModel extends BaseModel{
   constructor(rom, ramMemory, processor, processorSpeed) {

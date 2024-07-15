@@ -27,6 +27,8 @@
     border-radius: 5px;
     height: 45px;
     width: 150px;
+    font-weight: 700;
+    background-color: var(--theme-9th);
   }
   
   >.container-table {
@@ -34,6 +36,14 @@
     overflow-x: auto;
     border: 2px solid white;
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
+    box-shadow: inset 0 0 10px 1px var(--theme-bg1);
+    display: grid;
+    place-content: center;
+    
+    >span{
+      font-weight: 600;
+      font-size: 30px;
+    }
   }
 }

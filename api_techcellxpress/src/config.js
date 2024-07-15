@@ -6,6 +6,7 @@ dotenv.config();
 export const {
   PROTOCOL = process.env.PROTOCOL || 'http://',
   DOMAIN = process.env.DOMAIN || 'localhost:',
+  SECRET_ENCRYOT_KEY = process.env.SALT || 'tcx-crypto',
   PORT = process.env.PORT || 3010,
   ORIGIN = process.env.ORIGIN || ['http://localhost:3000', `http://localhost:${PORT}`],
   METHODS = process.env.METHODS || ['GET', 'POST', 'PUT', 'DELETE'],

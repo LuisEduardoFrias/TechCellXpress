@@ -5,30 +5,25 @@ import Form, { ValidationResult } from 'cp/form.tsx';
 import { useRouter } from 'next/navigation';
 import Session from 'svc/session'
 import type UserModel from '../../../../../cross_techcellxpress/models/user_model.js'
-import 'st/register.css'
+import 'st/login_register.css'
 
 export default function Register() {
   const rauter = useRouter();
 
   type User = { confirmPassword: string } & UserModel;
 
+  /*
   //I could have used react-hook-form to validate the fields.
   function handlervalidation(obj: User): ValidationResult {
-    if (!obj.name || !obj.lastName || !obj.email || !obj.user || !obj.password || !obj.confirmPassword)
-      return { enable: true, message: "Campos requeridos." };
-
-    if (obj.password != obj.confirmPassword)
-      return { enable: true, message: "Password and Confirm Password are not the same." };
-
-    if (obj.password.length < 8)
-      return { enable: true, message: "Password length is less than 8." };
+    return { enable: false, message: "" };
   }
+  */
 
   return (
-    <div className="container-register">
+    <div className="container-login_register">
       <Form<User>
-        service={async (da: User) => await Session.register(da)}
-        validateFields={handlervalidation} >
+        service={async (da: User) => await Session.register(da)} >
+        {/*validateFields={handlervalidation} >*/}
 
         <label>Name *
           <input type="text" name="name" placeholder="Juan Carlos" />

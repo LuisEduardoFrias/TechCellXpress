@@ -1,5 +1,5 @@
 //
-import { loadProducts as load, allRemove } from '../repositories/admin_repository.js';
+import { loadProducts as load, allRemove, removeAllWithprogress as remoceAWP } from '../repositories/admin_repository.js';
 import { insert as capacityInsert } from '../repositories/capacity_repository.js';
 import Phone from '../models/phone_model.js';
 
@@ -36,10 +36,14 @@ export default class Admin {
   static async removeAll() {
     const result = await allRemove();
 
-    if (result>=0)
+    if (result >= 0)
       return { error: null, data: result };
 
     return { error: 'default error', data: null };
 
+  }
+  //
+  static async removeAllWithprogress(progressNotify) {
+     await remoceAWP(progressNotify);
   }
 }

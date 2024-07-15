@@ -14,7 +14,7 @@ export default function Products() {
   const router = useRouter()
 
   const headers = [
-    "IMEI", "IMAGE URL", "BRAND", "MODEL", "COLOR", "CAPACITY", "RELEASE DATE"
+    "ID", "IMEI", "IMAGE URL", "BRAND", "MODEL", "COLOR", "CAPACITY", "RELEASEDATE",""
   ];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Products() {
   return (
     <div className="container-products" >
       <h2>Products</h2>
-      <button onClick={handleAddProduct}>add new phone</button>
+      <button onClick={handleAddProduct}>Add new phone</button>
       <div className="container-table">
         {loading && <loading />}
         {dataProduct ?
@@ -56,7 +56,7 @@ export default function Products() {
             headers={headers}
             handlerDelete={handlerDelete}
             handlerUpdate={handlerUpdate} />
-          : <span>no data</span>
+          : <span>No data</span>
         }
       </div>
     </div>

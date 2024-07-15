@@ -1,5 +1,5 @@
 /***/
-.container-update {
+.container-add-update {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #a8f6fe;
+  background-color: var(--theme-9th);
   color: black;
   
   display: flex;
@@ -26,10 +26,11 @@ form {
   >button {
     width: 200px;
     height: 25px;
-    background-color: green;
+    background-color: var(--theme-1st);
+    color: var(--font-color1);
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    
   }
 }
 

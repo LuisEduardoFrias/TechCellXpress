@@ -54,6 +54,54 @@ router.get('/', async (req, res) => {
 *       500:
 *         description: Internal server error.
 */
+router.get('/search/:search', async (req, res) => {
+  try {
+    const { search } = req.params;
+    const { error, data } = await PhoneProduct.read();
+
+    let filterData = [];
+    if (data) {
+      filterData = data.filter(e => e.brand === search);
+    }
+
+    res.status(error ? 404 : 200).json({ error, filterData });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error.", data: null });
+  }
+});
+/**
+* @swagger
+* /product:
+*   get:
+*     summary: Get all phones.
+*     security:
+*       - apiAuth: []
+*     tags:
+*       - product
+*     responses:
+*       200:
+*         description: Success.
+*         content:
+*           application/json:
+*             schema:
+*               type: array
+*               items:
+*                 type: object
+*                 properties:
+*                   imgUrl:
+*                     type: string
+*                   brand:
+*                     type: string
+*                   model:
+*                     type: string
+*                   color:
+*                     type: string
+*       404:
+*         description: Not found.
+*       500:
+*         description: Internal server error.
+*/
 //
 router.get('/:id', async (req, res) => {
   const { id } = req.params;

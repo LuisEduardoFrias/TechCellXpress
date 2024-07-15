@@ -25,6 +25,7 @@ export default function Menu() {
   useEffect(() => {
     if (!session) {
       const token = getCookie("access_token")
+      //validate token
       if (token) {
         changeVisibilityMenu(true)
       }
@@ -47,12 +48,12 @@ export default function Menu() {
     <>
       {
         showMenu &&
-        <div className="menu_bar">
+        <div className="menu_bar" >
           <button onClick={() => setShow(!show)}>
             <MenuSvg />
           </button>
 
-          <nav style={{ right: !show && '-400px' }}>
+          <nav style={{ right: !show && '-400px', visibility: show && "visible" }}>
             <ul>
               {path !== '/' &&
                 <li onClick={() => handleClick('/')}>Home</li>

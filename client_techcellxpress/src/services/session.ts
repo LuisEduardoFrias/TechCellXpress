@@ -35,10 +35,7 @@ class Session {
     if (error)
       return { error, data: null }
 
-    if (user.user === data.user && user.email === data.email)
       return { error: null, data: "Succes" }
-
-    return { error: 'unidentified error.', data: null }
   }
 }
 

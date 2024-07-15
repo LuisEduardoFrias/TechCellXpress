@@ -39,11 +39,11 @@ export const Capacity = sequelize.define('Capacity', {
     primaryKey: true,
   },
   rom: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   ramMemory: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   processor: {

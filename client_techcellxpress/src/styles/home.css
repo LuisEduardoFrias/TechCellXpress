@@ -12,8 +12,8 @@
 .filter {
   grid-area: filter;
   height: 100%;
-  background-color: white;
   color: black;
+  background-color: var(--theme-bg1);
   
   display: flex;
   justify-content: center;
@@ -40,6 +40,7 @@
   >select {
     width: 150px;
     height: 25px;
+    background-color: black;
   }
 }
 
@@ -55,34 +56,51 @@
   justify-content: center;
   align-items: center;
   
-  #notData{
+  #notData {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    font-size: 30px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
   }
 }
 
 .container-card {
-  background-color: white;
   min-width: 200px;
   height: fill;
-  border: var(--border-with) solid var(--border-color);
-  border-radius: Calc(var(--border-radius) - 2px);
-  padding: 4px;
-  box-shadow: 0 0 3px 1px white;
+  border: var(--border-width) solid var(--border-color1);
+  background-color: var(--theme-bg1);
+  border-radius: Calc(var(--border-radius) + 5px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: black;
   
-  >img {
+  >div:nth-child(1) {
     --bimg: Calc(var(--border-radius) - 6px);
     border-radius: var(--bimg) var(--bimg) 0 0;
+    background-size: cover;
+    padding-inline: 2px;
+    padding-top: 4px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    height: auto;
+  }
+  
+  >div:nth-child(1) img {
+    background-size: fill;
     width: 100%;
     height: auto;
   }
   
+  >div:last-child {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    background-color: var(--theme-9th);
+  }
 }
 
 @media (width < 800px) {

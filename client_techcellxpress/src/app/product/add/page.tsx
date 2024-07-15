@@ -1,9 +1,9 @@
 'use client'
 import Form, { ValidationResult } from 'cp/form.tsx';
-import { setCookie } from 'hp/local_cookie';
-import PhoneModel, { CapacityModel } from '../../../../../cross_techcellxpress/models/phone_model.js'
+import { getCookie } from 'hp/local_cookie';
+import PhoneModel, { CapacityModel } from '../../../../../cross_techcellxpress/models/phone_model.mjs'
 import Product from 'svc/product'
-import 'st/update_product.css'
+import 'st/add_update_product.css'
 
 export default function Add() {
 
@@ -13,8 +13,8 @@ export default function Add() {
     const capacity = CapacityModel.mapper(da);
     const phone = PhoneModel.mapper(da);
     phone.capacity = capacity;
-
-    const { error, data } = await Product.post(da);
+    
+    const { error, data } = await Product.post(phone, getCookie("access_token"));
 
     if (error) return { error, data }
 
@@ -38,7 +38,7 @@ export default function Add() {
   }
 
   return (
-    <dev className="container-update">
+    <dev className="container-add-update">
       <h2>Add product</h2>
 
       <Form<Phone>
@@ -46,10 +46,14 @@ export default function Add() {
         validateFields={handlervalidation} >
         <fieldset>
           <legend>Phone product</legend>
-
           <div className="field">
             <label htmlFor="imgUrl">Imagen:</label>
-            <input id="imgUrl" name="imgUrl" type="file" />
+            <input id="imgUrl" name="imgUrl" type="text" />
+          </div>
+
+          <div className="field">
+            <label htmlFor="imei">Imei:</label>
+            <input id="imei" name="imei" placeholder="ttt6h6g-rg5h5, htuiy5f-4y7itr..." type="text" />
           </div>
 
           <div className="field">

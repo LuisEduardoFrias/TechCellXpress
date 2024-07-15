@@ -9,7 +9,7 @@
   >button {
     border-radius: 8px;
     height: 40px;
-    background-color: #adf6ee;
+    background-color: var(--theme-0);
     color: white;
     font-weight: bold;
     border: none;
@@ -18,8 +18,9 @@
     transition: transform 0.3s;
     transition: box-shadow 1s ease,
       transform 1s ease;
-    box-shadow: 2px 2px 1px 1px #383838,
-      -2px -2px 1px 1px #242424;
+    box-shadow: 2px 2px 1px 1px #383838
+      /*,-2px -2px 1px 1px #242424*/
+    ;
   }
   
   >button:active {
@@ -28,15 +29,16 @@
   }
   
   >nav {
+    visibility: hidden;
     position: absolute;
-    top: 45px;
+    top: 50px;
     right: 30px;
     width: 100px;
     z-index: 9;
     
     transition: right 1s ease;
     box-shadow: 0 0 3px 1px #b6b6b6;
-    background-color: #028f88;
+    background-color: var(--theme-9th);
     
     >ul {
       position: static;
@@ -57,13 +59,13 @@
         font-weight: bold;
         color: black;
         padding: 5px;
-        background-color: #adf6ee;
+        background-color: var(--theme-0);
         cursor: pointer;
         user-select: none;
       }
       
       >li:hover {
-        background-color: #066d6b;
+        background-color: var(--theme-9th);
       }
       
       >li:active {
