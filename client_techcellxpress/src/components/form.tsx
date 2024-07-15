@@ -16,8 +16,8 @@ export type ValidationResult = {
 
 type TFormProps<T> = {
   service: (value: T) => DataResult,
-  validateFields: (obj: T, data: DataResult) => ValidationResult,
   children: ReactElement
+  validateFields?: (obj: T, data: DataResult) => ValidationResult,
 }
 
 const defaultDataAlert: DataAlert = {
@@ -41,6 +41,7 @@ export default function Form<T>({ validateFields, service, children }: TFormProp
       formDataObject[key] = value;
     });
 
+if(validateFields){
     const _validateFields: ValidationResult = validateFields(formDataObject as T);
     if (_validateFields && _validateFields.enable) {
       setAlert({
@@ -53,11 +54,12 @@ export default function Form<T>({ validateFields, service, children }: TFormProp
       })
       return;
     }
+}
 
     setLoading(true);
 
     const { error, data } = await service(formDataObject as T)
-    
+
     setLoading(false)
 
     if (error) {
@@ -80,9 +82,6 @@ export default function Form<T>({ validateFields, service, children }: TFormProp
         variant: variantType.filled,
       }
     })
-
-
-
   }
 
   const StyleForm = {
@@ -128,34 +127,34 @@ export default function Form<T>({ validateFields, service, children }: TFormProp
   }
 
   return (
-    <>
-    <form onSubmit={handlerSubmit} style={StyleForm}>
-      <div style={StyleFacade}></div>
+    <div>
+      <form onSubmit={handlerSubmit} style={StyleForm}>
+        <div style={StyleFacade}></div>
 
-      <div style={StyleLoading}>
-        {loading && <Loading />}
-      </div>
+        <div style={StyleLoading}>
+          {loading && <Loading />}
+        </div>
 
-      <div style={StyleAlert}>
-        <Alert
-          key='Alert'
-          show={alert.enable}
-          dataAlert={alert.data}
-          exe={() => {
-            setAlert({ enable: false, data: defaultDataAlert });
-          }}
-        />
-      </div>
+        <div style={StyleAlert}>
+          <Alert
+            key='Alert'
+            show={alert.enable}
+            dataAlert={alert.data}
+            exe={() => {
+              setAlert({ enable: false, data: defaultDataAlert });
+            }}
+          />
+        </div>
 
-      {children}
+        {children}
 
-      <button
-        disabled={loading}
-        type='submit'
-        className='btn'>
-        Send
-      </button>
-    </form>
-    </>
+        <button
+          disabled={loading}
+          type='submit'
+          className='btn'>
+          Send
+        </button>
+      </form>
+    </div>
   )
 }

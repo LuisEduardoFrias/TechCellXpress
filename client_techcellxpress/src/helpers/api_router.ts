@@ -1,6 +1,8 @@
 
 const base = process.env.BASE_API_TECHCELLXPRESS;
 
+export const baseApiTechcellxpress = base;
+
 export const admin = {
   loadProducts: `${base}/admin/load_products`,
   removeAll: `${base}/admin/removeAll`,

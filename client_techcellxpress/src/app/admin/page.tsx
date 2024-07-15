@@ -2,17 +2,15 @@
 'use client'
 import { useEffect } from 'react'
 import FileUploader from 'cp/file_uploader'
-import useFetch, { FetchObj, Method, Result } from 'hk/use_fetch';
-import Auth from 'cp/auth';
+import { io } from 'socket.io-client'
+import { getCookie } from 'hp/local_cookie'
+import { baseApiTechcellxpress } from 'hp/api_router'
+import Admin from 'svc/admin'
 import Table from 'cp/table'
 import 'st/record.css'
 
 export default function Record() {
-  const [setFetch, data, loading] = useFetch(process.env.NEXT_PUBLIC_API_TECHCELLXPRESS);
-
-  useEffect(() => {
-    alert("Succes");
-  }, [data?.data])
+  const socket = io(baseApiTechcellxpress);
   
   const headers = [
     "IMEI", "IMAGE URL", "BRAND", "MODEL", "COLOR", "CAPACITY", "RELEASE DATE"
@@ -112,33 +110,37 @@ export default function Record() {
   ];
 
   function handlerDeleteAll() {
-    setFetch({ url: '/admin/removeAll', method: Method.DELETE });
+    (async () => {
+      const { error, data } = await Admin.removeAll(getCookie("access_token"))
+
+      if (error) {
+        //alert
+      }
+    })()
   }
 
-  function handlerUpdate(body) {
-    setFetch({ url: '/admin/load_products', method: Method.POST, body });
+  function handlerLoad(body) {
+    Admin.loadProducts(body, getCookie("access_token"));
   }
 
   return (
-    <Auth>
-      <div className="container-record">
-        <h2>Admin</h2>
+    <div className="container-record">
+      <h2>Admin</h2>
 
-        <div>
-          <span>Cargar productos de prueba</span>
-          <FileUploader handler={handlerUpdate} />
-        </div>
-
-        <button className="custom-button" onClick={() => handlerDeleteAll()}>
-          Eliminar todos los productos
-        </button>
-
-
-        <div className="list-record">
-                <Table data={_data} headers={headers}/>
-        </div>
-
+      <div>
+        <span>Cargar productos de prueba</span>
+        <FileUploader handler={handlerLoad} />
       </div>
-    </Auth>
+
+      <button className="custom-button" onClick={() => handlerDeleteAll()}>
+        Eliminar todos los productos
+      </button>
+
+
+      <div className="list-record">
+        <Table data={_data} headers={headers} />
+      </div>
+
+    </div>
   )
 }

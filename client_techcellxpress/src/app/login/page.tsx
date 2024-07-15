@@ -32,32 +32,31 @@ export default function Login() {
     return { error, data: "Success" };
   }
 
-  //I could have used react-hook-form to validate the fields.
+  /*
+  I could have used react-hook-form to validate the fields.
   function handlervalidation(obj: User): ValidationResult {
-    if (!obj.user || !obj.password)
-      return { enable: true, message: "required fields." };
+    return { enable: false, message: "" };
   }
+  */
 
   return (
-    <>
-      <div className="container-register">
-        <Form<User>
-          service={handlerServer}
-          validateFields={handlervalidation} >
-          <label >User *
-            <input type="text" name="user" placeholder="Juan316" />
-          </label>
-          <label >Password *
-            <input type="password" name="password" placeholder="**********" />
-          </label>
-        </Form>
+    <div className="container-register">
+      <Form<User>
+        service={handlerServer} >
+        {/*validateFields={handlervalidation} >*/} 
+        <label >User *
+          <input type="text" name="user" placeholder="Juan316" />
+        </label>
+        <label >Password *
+          <input type="password" name="password" placeholder="**********" />
+        </label>
+      </Form>
 
-        <button onClick={() => rauter.push('/register')}>
-          <i>
-            check in
-          </i>
-        </button>
-      </div>
-    </>
+      <button onClick={() => rauter.push('/register')}>
+        <i>
+          check in
+        </i>
+      </button>
+    </div>
   )
 }

@@ -1,91 +1,101 @@
 'use client'
 import Form, { ValidationResult } from 'cp/form.tsx';
 import { setCookie } from 'hp/local_cookie';
-import Product from 'svc/session'
+import PhoneModel, { CapacityModel } from '../../../../../cross_techcellxpress/models/phone_model.js'
+import Product from 'svc/product'
 import 'st/update_product.css'
 
 export default function Add() {
 
-  async function handlerServer(da: User) {
-    const { error, data } = await Session.logIn(da);
+  type Phone = PhoneModel & CapacityModel;
+
+  async function handlerServer(da: Phone) {
+    const capacity = CapacityModel.mapper(da);
+    const phone = PhoneModel.mapper(da);
+    phone.capacity = capacity;
+
+    const { error, data } = await Product.post(da);
 
     if (error) return { error, data }
 
-    login(data)
-    setCookie('access_token', data?.token)
-    SetStorage({ key: 'session', value: data });
-    rauter.push('/')
-    return { error, data: "Success" };
+    return { error: null, data: "Success" };
   }
 
   //I could have used react-hook-form to validate the fields.
-  function handlervalidation(obj: User): ValidationResult {
-    if (!obj.user || !obj.password)
-      return { enable: true, message: "required fields." };
+  function handlervalidation(obj: Phone): ValidationResult {
+    if (
+      !obj.imgUrl ||
+      !obj.brand ||
+      !obj.model ||
+      !obj.color ||
+      !obj.rom ||
+      !obj.ramMemory ||
+      !obj.processor ||
+      !obj.processorSpeed ||
+      !obj.releaseDate) {
+      return { enable: true, message: "Some fields are required." };
+    }
   }
 
   return (
     <dev className="container-update">
       <h2>Add product</h2>
 
-      <Form<User>
+      <Form<Phone>
         service={handlerServer}
         validateFields={handlervalidation} >
         <fieldset>
           <legend>Phone product</legend>
 
-          <div class="field">
-            <label for="imgUrl">Imagen:</label>
+          <div className="field">
+            <label htmlFor="imgUrl">Imagen:</label>
             <input id="imgUrl" name="imgUrl" type="file" />
           </div>
 
-          <div class="field">
-            <label for="brand">Marca:</label>
+          <div className="field">
+            <label htmlFor="brand">Marca:</label>
             <input id="brand" name="brand" placeholder="Samsung, Huawei, Xiaomi..." type="text" />
           </div>
 
-          <div class="field">
-            <label for="model">Modelo:</label>
+          <div className="field">
+            <label htmlFor="model">Modelo:</label>
             <input id="model" name="model" placeholder="S4, Redmi, Honor..." type="text" />
           </div>
 
-          <div class="field">
-            <label for="color">Color:</label>
+          <div className="field">
+            <label htmlFor="color">Color:</label>
             <input id="color" name="color" type="color" />
           </div>
 
-          <div class="field">
-            <label for="releaseDate">Fecha de lanzamiento:</label>
+          <div className="field">
+            <label htmlFor="releaseDate">Fecha de lanzamiento:</label>
             <input id="releaseDate" name="releaseDate" type="datetime-local" />
           </div>
 
           <fieldset>
             <legend>Capacity</legend>
-            <div class="field">
-              <label for="rom">Almacenamiento interno:</label>
+            <div className="field">
+              <label htmlFor="rom">Almacenamiento interno:</label>
               <input id="rom" name="rom" placeholder="16GB, 32GB..." type="text" />
             </div>
 
-            <div class="field">
-              <label for="ramMemory">Memoria RAM:</label>
+            <div className="field">
+              <label htmlFor="ramMemory">Memoria RAM:</label>
               <input id="ramMemory" name="ramMemory" placeholder="2GB, 4GB, 6GB..." type="text" />
             </div>
 
-            <div class="field">
-              <label for="processor">Procesador:</label>
+            <div className="field">
+              <label htmlFor="processor">Procesador:</label>
               <input id="processor" name="processor" placeholder="Exynos, Snapdragon..." type="text" />
             </div>
 
-            <div class="field">
-              <label for="processorSpeed">Velocidad del procesador:</label>
+            <div className="field">
+              <label htmlFor="processorSpeed">Velocidad del procesador:</label>
               <input id="processorSpeed" name="processorSpeed" placeholder="2GHz, 3.2GHz..." type="text" />
             </div>
           </fieldset>
         </fieldset>
-
-        <button>Create</button>
       </Form>
-
     </dev>
 
   )

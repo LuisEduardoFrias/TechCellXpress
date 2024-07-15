@@ -1,6 +1,6 @@
 //
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useStore from "str/store";
 import Session from 'svc/session';
 import { getCookie, setCookie } from 'hp/local_cookie';
@@ -9,7 +9,10 @@ import MenuSvg from 'sv/menu_svg';
 import 'st/menu.css';
 
 export default function Menu() {
-  const { session, showMenu } = useStore((state) => ({ session: state.session, showMenu: state.showMenu }))
+  const { session, showMenu, changeVisibilityMenu } = useStore((state) => ({
+    session: state.session,
+    showMenu: state.showMenu, changeVisibilityMenu: state.changeVisibilityMenu
+  }))
   const [show, setShow] = useState(false);
   const router = useRouter();
   const path = usePathname();
@@ -19,8 +22,16 @@ export default function Menu() {
     router.push(url)
   }
 
-  function handleLogout(url: string) {
+  useEffect(() => {
+    if (!session) {
+      const token = getCookie("access_token")
+      if (token) {
+        changeVisibilityMenu(true)
+      }
+    }
+  }, [])
 
+  function handleLogout(url: string) {
     const user = {
       id: session.id,
       user: session.user,

@@ -1,55 +1,77 @@
 'use client'
+import { useState, useEffect } from 'react'
+import { useParams, useRouter } from 'next/navigation'
 import { notFound } from 'next/navigation'
-import Auth from 'cp/auth';
+import { getCookie } from 'hp/local_cookie'
+import Loading from 'cp/loading'
+import Product from 'svc/product'
 import 'st/delete_product.css'
 
-type Props = {
-  params: { id: string }
-}
+export default function Delete() {
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const router = useRouter();
+  const params = useParams();
+  if (!params) notFound();
 
-export default function Delete({ params }: Props) {
-  const { id } = params;
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
 
-  const product = {
-    imei: 123456789012345,
-    imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=',
-    brand: 'Samsung',
-    model: 'Galaxy S20',
-    color: 'Black',
-    capacity: '128GB',
-    releaseDate: '2020-02-11'
-  };
+      const { error, data } = await Product.getById(params.delete, getCookie("access_token"))
 
-  if (!id) { }//notFound();
+      if (error) {
+        //alert
+        console.error(error)
+      }
+
+      setProduct(data);
+      setLoading(false);
+    })()
+  }, [])
 
   function handlerDelete() {
     if (!confirm('Are you sure?')) {
-      alert('Pareces indeciso');
       return;
     }
 
-    alert('Okay, si estas seguro.');
+    (async () => {
+      setLoading(true);
+
+      const { error, data } = await Product.delete(params.delete, getCookie("access_token"))
+
+      if (error) {
+        //alert
+        console.error(error)
+      }
+
+      alert('Okay, ware deleted.');
+      setLoading(false);
+      router.push('/products')
+    })()
   }
 
   return (
-    <Auth>
-      <div className="container-delete" >
-        <h2>Delete page</h2>
+    <div className="container-delete" >
+      <h2>Delete page</h2>
 
-        <div>
-          <img src={product.imgUrl} alt={`Image of product ${product.brand} ${product.model}.`} />
-        </div>
-
-        <button onClick={handlerDelete}>Delete</button>
-
-        <div>
-          <div><span>Color :</span><span>{product.color}</span></div>
-          <div><span>Brand :</span><span>{product.brand}</span></div>
-          <div><span>Model :</span><span>{product.model}</span></div>
-          <div><span>Capacity :</span><span>{product.capacity}</span></div>
-          <div><span>Release date :</span><span>{product.releaseDate}</span></div>
-        </div>
+      <div className="container-loading">
+        {loading && <Loading />}
       </div>
-    </Auth>
+
+      <div>
+        <img src={product?.imgUrl} alt={`Image of product ${product?.brand} ${product?.model}.`} />
+      </div>
+
+      <button onClick={handlerDelete}>Delete</button>
+
+      <div style={{ boxShadow: `inset 0 0 13px 1px ${product?.color}` }}>
+        <div><span>Color :</span><span>{product?.color}</span></div>
+        <div><span>Brand :</span><span>{product?.brand}</span></div>
+        <div><span>Model :</span><span>{product?.model}</span></div>
+        <div><span>Capacity :</span><span>{product?.capacity}</span></div>
+        <div><span>Release date :</span><span>{product?.releaseDate}</span></div>
+      </div>
+    </div>
   )
 }

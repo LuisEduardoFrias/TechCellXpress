@@ -3,7 +3,6 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 
-// This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
   const jwt = request.cookies.get('access_token');
 
@@ -21,5 +20,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/admin/:path*', '/products', '/product/:path'],
+  matcher: ['/', '/admin/:path*', '/products', '/product/:path*'],
 }

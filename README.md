@@ -3,8 +3,8 @@ Cell Phone Store Manager.
 
 ## Requires node v22.2.0
 ## Execute the command in the root folder --> 'npm run dev'
-## Test user --> LuisEF28
-## Test pass --> 12345678
+## Test user --> luise
+## Test pass --> luise
 
 ---------------------------------------
 
@@ -42,14 +42,14 @@ Desarrollar una aplicación web para administrar productos (teléfonos celulares
 
 ### Requerido
 
-- La aplicación debe tener una página de inicio de sesión y registro. (Proporcionar un usuario de prueba)
-- La aplicación debe tener una página principal donde se muestren todos los productos disponibles y sus datos; El acceso a esta página sólo es posible con el inicio de sesión del usuario.
-- Debería ser posible añadir nuevos productos.
-- Debería ser posible editar productos existentes.
-- Debería ser posible eliminar productos.
-- Agregue funciones de búsqueda y filtrado de productos.
-- Debería ser posible enumerar productos de API externas.
-- Debe tener un botón para poder cargar 50 productos.
-- Debe haber un botón para eliminar todos los productos del sitio web.
-- Debería haber una barra de progreso que muestre el estado de eliminación del 0 al 100%.
-- Debe haber una pantalla llamada registros donde pueda ver los productos que se han eliminado.
+- [x] La aplicación debe tener una página de inicio de sesión y registro. (Proporcionar un usuario de prueba)
+- [x] La aplicación debe tener una página principal donde se muestren todos los productos disponibles y sus datos; El acceso a esta página sólo es posible con el inicio de sesión del usuario.
+- [x] Debería ser posible añadir nuevos productos.
+- [x] Debería ser posible editar productos existentes.
+- [x] Debería ser posible eliminar productos.
+- [x] Agregue funciones de búsqueda y filtrado de productos.
+- [x] Debería ser posible enumerar productos de API externas.
+- [x] Debe tener un botón para poder cargar 50 productos.
+- [x] Debe haber un botón para eliminar todos los productos del sitio web.
+- [x] Debería haber una barra de progreso que muestre el estado de eliminación del 0 al 100%.
+- [x] Debe haber una pantalla llamada registros donde pueda ver los productos que se han eliminado.

@@ -1,5 +1,5 @@
 //
-import BaseModel from './bose_model.js';
+import BaseModel from './base_model.js';
 
 export class CapacityModel extends BaseModel{
   constructor(rom, ramMemory, processor, processorSpeed) {

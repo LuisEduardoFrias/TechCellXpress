@@ -11,7 +11,7 @@ class Admin {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async removeAll(token) {
@@ -21,7 +21,7 @@ class Admin {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
 }
 

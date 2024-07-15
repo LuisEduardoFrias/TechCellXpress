@@ -1,9 +1,11 @@
 //
-import crypto from 'crypto';
+//import crypto from 'crypto';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class BaseModel {
   constructor() {
-    this.id = crypto.randomUUID();
+    //this.id = crypto.randomUUID();
+    this.id = uuidv4();
   }
 
   static mapper(obj) {

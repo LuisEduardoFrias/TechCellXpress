@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     changeVisibilityMenu()
-    /*  setLoading(true);
+   setLoading(true);
   
       (async () => {
         const { error, data } = await Service.get(getCookie("access_token"));
@@ -25,7 +25,7 @@ export default function Home() {
         setLoading(false);
         setData(data);
       })()
-      */
+    
   }, []);
 
   return (

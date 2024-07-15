@@ -98,7 +98,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  background-color: red;
+}
+
+footer {
+  visibility: hidden;
+  width: 100%;
+  height: 50px;
+  background-color: #3b3b3b;
+  padding: 0 0 0 10px;
   
+  display: flex;
+  align-items: center;
 }
 
 button {

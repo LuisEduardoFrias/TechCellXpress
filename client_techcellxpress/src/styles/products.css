@@ -4,30 +4,36 @@
   height: 100%;
   
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 60px 30px 50px 1fr;
-  grid-row-gap: 4px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 30px 50px 1fr 1fr;
+  grid-row-gap: 10px;
   grid-template-areas:
-    "header header header"
-    ". . ."
-    "btn . ."
-    "table table table"
+    "header"
+    ". "
+    "btn"
+    "table"
   ;
   
   >h2 {
     grid-area: header;
     text-align: center;
     width: 100%;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
   }
   
   >button {
     grid-area: btn;
     border-radius: 5px;
+    height: 45px;
+    width: 150px;
   }
   
-  >table {
+  >.container-table {
     grid-area: table;
+    overflow-x: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 3px;
   }
 }

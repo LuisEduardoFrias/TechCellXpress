@@ -10,7 +10,7 @@ class Product {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async getById(id, token) {
@@ -20,10 +20,11 @@ class Product {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async post(product, token) {
+
     const datafetch: DataFetch = {
       url: product.post,
       method: Method.POST,
@@ -31,7 +32,7 @@ class Product {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async put(id, product, token) {
@@ -42,7 +43,7 @@ class Product {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
   //
   async delete(id, token) {
@@ -52,7 +53,7 @@ class Product {
       token: token,
     }
 
-    const { error, data } = await Fetch(datafetch);
+    return await Fetch(datafetch);
   }
 }
 
