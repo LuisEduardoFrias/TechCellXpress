@@ -6,7 +6,8 @@
   "author": "luiseduardofrias",
   "license": "ISC",
   "scripts": {
-    "dev": "node --watch api_techcellxpress/src/index.js & next dev client_techcellxpress/"
+    "dev": "node --watch api_techcellxpress/src/index.js & next dev client_techcellxpress/",
+    "build": "next build client_techcellxpress/"
   },
   "repository": {
     "type": "git",

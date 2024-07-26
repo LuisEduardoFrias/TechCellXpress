@@ -7,9 +7,9 @@ export default function Socket(url: string) {
     autoConnect: false
   });
 
-  function connet(text: string, fn: (value: any) => void) {
+  function connet(text: string, fn: (value: number) => void) {
     socket.connect();
-    socket.on(text, (nuevoProgreso) => {
+    socket.on(text, (nuevoProgreso: number) => {
       fn(nuevoProgreso);
     });
 

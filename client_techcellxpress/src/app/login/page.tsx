@@ -1,64 +1,64 @@
 //
 'use client'
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { setCookie } from 'hp/local_cookie';
-import useStorage from 'hk/use_storage';
 import useStore from 'str/store';
-import Form, { ValidationResult } from 'cp/form.tsx';
-import SessionSerice from 'svc/session'
-
-import 'st/login_register.css'
+import Form, { Span } from 'cp/form';
+import Session from 'svc/session'
+import 'st/login.css'
 
 export default function Login() {
   const login = useStore((state) => state.login)
-  const { SetStorage } = useStorage('sessionStorage');
-  const rauter = useRouter();
+  const router = useRouter();
 
-  type User = {
+  type Credentials = {
     user: string,
     password: string,
   }
 
-  async function handlerService(da: User) {
-    const { error, data } = await SessionSerice.logIn(da);
-
-    if (error) return { error, data }
+  async function handlerService(credentials: Credentials) {
+    const { error, data } = await Session.logIn(credentials);
+    if (error) {
+      //notify
+      alert("error login: " + error)
+      return;
+    }
 
     login(data)
-    setCookie('access_token', data?.token)
-    SetStorage({ key: 'session', value: data });
-    rauter.push('/')
-    return { error, data: "Success" };
-  }
-
-  //I could have used react - hook - form to validate the fields.
-  function handlervalidation(obj: User): ValidationResult {
-    if (!obj.user)
-      return { enable: true, message: "User is requiered!" };
-    if (!obj.password)
-      return { enable: true, message: "Password is requiered!" };
-
-    return { enable: false, message: "" };
+    router.push('/dashboard');
   }
 
   return (
-    <div className="container-login_register">
-      <Form<User>
-        service={handlerService}
-        validateFields={handlervalidation} >
-        <label >User *
-          <input type="text" name="user" placeholder="Juan316" />
-        </label>
-        <label >Password *
-          <input type="password" name="password" placeholder="**********" />
-        </label>
-      </Form>
+    <div className="container-login">
+      <header>
+        <Image src="/logo.webp" priority width="300" height="300" alt="img logo" />
+      </header>
+      <main>
+        <div className="container-form">
+          <Form<Credentials> onService={handlerService} textBtn="Access">
+            <label >User
+              <input id="user" name="user" placeholder="Juan316" />
+              <Span
+                htmlFor="user"
+                required="This field is required."
+                minlength={[4, "This field must be at least 4 characters."]} />
+            </label>
+            <label >Password
+              <input id="password" name="password" placeholder="*****" type="password" />
+              <Span
+                htmlFor="password"
+                required="This field is required."
+                minlength={[3, "This field must be at least 8 characters."]} />
+            </label>
+          </Form>
 
-      <button onClick={() => rauter.push('/register')}>
-        <i>
-          check in
-        </i>
-      </button>
+          <button onClick={() => router.push('/register')}>
+            <i>
+              check in
+            </i>
+          </button>
+        </div>
+      </main>
     </div>
   )
 }

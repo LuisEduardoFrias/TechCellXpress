@@ -1,7 +1,7 @@
 import { insert, select, selectBy, selectById, update as udt, remove as rv } from '../repositories/phone_product_repository.js';
 import { insert as capacityInsert } from '../repositories/capacity_repository.js';
-import Phone from '../../../cross_techcellxpress/models/phone_model.mjs';
-import PhoneDto from '../../../cross_techcellxpress/dtos/phone_dto.mjs';
+import Phone from '../models/phone_model.js';
+import PhoneDto from '../dtos/phone_dto.js';
 
 export default class PhoneProduct {
   static async create(newPhone) {

@@ -1,25 +1,26 @@
 //
-import crypto from 'crypto';
+import BaseModel from './base_model.js';
 
-export class Capacity {
-  constructor(capacity) {
-    this.id = crypto.randomUUID();
-    this.rom = capacity.rom;
-    this.ramMemory = capacity.ramMemory;
-    this.processor = capacity.processor;
+export class CapacityModel extends BaseModel {
+  constructor(rom, ramMemory, processor, processorSpeed) {
+    super();
+    this.rom = rom;
+    this.ramMemory = ramMemory;
+    this.processor = processor;
+    this.processorSpeed = processorSpeed;
   }
 }
 
-export default class Phone {
-  constructor(phone) {
-    this.id = crypto.randomUUID();
-    this.imei = phone.imei;
-    this.imgUrl = phone.imgUrl;
-    this.brand = phone.brand;
-    this.model = phone.model;
-    this.color = phone.color;
-    this.capacity = new Capacity(phone.capacity);
-    this.releaseDate = phone.releaseDate;
+export default class PhoneModel extends BaseModel {
+  constructor(imei, imgUrl, brand, model, color, capacity, releaseDate) {
+    super();
+    this.imei = imei;
+    this.imgUrl = imgUrl;
+    this.brand = brand;
+    this.model = model;
+    this.color = color;
+    this.capacity = capacity;
+    this.releaseDate = releaseDate;
     this.isRemoved = false;
   }
 }

@@ -38,7 +38,7 @@
       "st/*": [
         "./src/styles/*"
       ],
-      "sv/*": [
+      "svg/*": [
         "./src/svgs/*"
       ],
       "str/*": [
@@ -49,6 +49,12 @@
       ],
       "hp/*": [
         "./src/helpers/*"
+      ],
+      "md/*": [
+        "./src/models/*"
+      ],
+      "dto/*": [
+        "./src/dtos/*"
       ]
     }
   },

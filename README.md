@@ -53,3 +53,59 @@ Desarrollar una aplicación web para administrar productos (teléfonos celulares
 - [x] Debe haber un botón para eliminar todos los productos del sitio web.
 - [x] Debería haber una barra de progreso que muestre el estado de eliminación del 0 al 100%.
 - [x] Debe haber una pantalla llamada registros donde pueda ver los productos que se han eliminado.
+
+
+/////////////////////////////////////////////////
+
+Prueba Asíncrona de Desarrollador Full Stack JavaScript
+
+Lexart ® 2024
+
+Ingeniería de software
+
+Objetivo
+
+Desarrollar una aplicación web para gestionar productos (teléfonos móviles) utilizando Node.js para el backend y React para el frontend. El backend debe proporcionar servicios externos que permitan a los clientes consumir la lista de productos e insertar nuevos productos.
+
+Requisitos
+
+Backend (Node.js en Vercel functions):
+
+Crear una API RESTful para operaciones CRUD (Create, Read, Update, Delete) de productos.
+Utilizar Express.js para el enrutamiento.
+Utilizar Sequelize para interactuar con la base de datos.
+Utilizar Postgres de Vercel como base de datos.
+Exponer una ruta exclusiva para permitir que clientes externos de la aplicación consuman los productos; estas rutas deben utilizar algún tipo de autorización.
+Exponer una ruta exclusiva para permitir que clientes externos de la aplicación inserten productos; estas rutas deben utilizar algún tipo de autorización.
+Exponer servicios externos utilizando Swagger.
+Crear un procedimiento que permita la eliminación de todos los productos en segundo plano.
+Crear un procedimiento que permita cargar 50 productos de prueba.
+
+Frontend (React en Vercel):
+
+Crear formulario para registro e inicio de sesión.
+Crear una interfaz de usuario para mostrar los productos y permitir que el usuario realice operaciones CRUD disponibles solo para usuarios que hayan iniciado sesión.
+Implementar rutas para navegar entre las diferentes vistas (lista de productos, agregar producto, editar producto, registros).
+Utilizar servicios para consumir la API RESTful creada en el backend.
+Al hacer clic en "Cargar productos de prueba" debe agregar 50 productos.
+Al hacer clic en "Eliminar todos los productos", ejecutar el procedimiento de eliminación y mostrar una barra de progreso del 0 al 100% que se actualice en tiempo real.
+Mostrar una lista de los productos eliminados en una pantalla llamada registros dentro del sitio.
+
+Requerido
+
+La aplicación debe tener una página para iniciar sesión y registrarse. (Proporcionar un usuario de prueba)
+La aplicación debe tener una página principal donde se muestran todos los productos disponibles y sus detalles; el acceso a esta página solo es posible con el inicio de sesión del usuario.
+Debe ser posible agregar nuevos productos.
+Debe ser posible editar los productos existentes.
+Debe ser posible eliminar productos.
+Agregar funcionalidades de búsqueda y filtrado de productos.
+Debe ser posible listar los productos de las APIs externas.
+Debe tener un botón para poder cargar 50 productos.
+Debe tener un botón para poder eliminar todos los productos del sitio.
+Debe tener una barra de progreso mostrando el estado de la eliminación del 0 al 100%.
+Debe tener una pantalla llamada registros donde se pueden ver los productos que fueron eliminados.
+
+Entrega
+
+Envíe el repositorio y el enlace de la solución a: contacto@lexartlabs.xyz con el asunto: "Nombre del candidato - Prueba FullStack - Software"
+Hacer el despliegue de la aplicación en Vercel.

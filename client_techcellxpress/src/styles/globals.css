@@ -50,20 +50,25 @@
 
 html,
 body {
-  max-width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-rows: 100px 1fr 50px;
-  grid-template-areas: "header" "main" "footer";
-  grid-row-gap: 10px;
+  max-width: 100dvw;
+  height: 100dvh;
 }
 
 body {
   background: var(--theme-bg);
   color: var(--font-color);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /*
+  overflow-x: hidden;
+  grid-template-rows: 1fr;
+  grid-template-rows: 100px 1fr 50px;
+  grid-template-areas: "header" "main" "footer";
+  grid-row-gap: 10px
+  */
 }
 
 a {
@@ -109,8 +114,21 @@ button:active {
   transform: scale(0.9);
 }
 
-/*//////////////*/
+  .notData {
+    width: 100%;
+    text-wrap: notwrap;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
 
+/*//////////////*/
+/*
 header {
   grid-area: header;
   height: 100%;
@@ -153,3 +171,4 @@ footer {
   display: flex;
   align-items: center;
 }
+*/

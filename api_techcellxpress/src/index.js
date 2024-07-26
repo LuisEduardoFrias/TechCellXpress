@@ -13,7 +13,7 @@ import configCors from './config_cors.js';
 //sync tables dabe
 //import '../src/models/models_db.js';
 //
-import registerLogin from './routes/register_login.js';
+import session from './routes/session.js';
 import phoneProduct from './routes/phone_product.js';
 import admin from './routes/admin.js';
 import Socket from './helpers/socket.js';
@@ -51,7 +51,7 @@ Socket(httpServer, "removeAll", (emit) => {
 });
 
 //routers
-app.use(registerLogin);
+app.use(session);
 app.use('/product', phoneProduct);
 app.use('/admin', admin);
 

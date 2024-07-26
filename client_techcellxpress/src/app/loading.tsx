@@ -1,8 +1,6 @@
 //
-import Styles from 'st/loading.module.css';
+import load from 'cp/loading'
 
 export default function Loading() {
-  return (
-      <div className={Styles.ldDualRing}></div>
-  );
+  return (<load />);
 }

@@ -1,160 +1,144 @@
-//
 "use client"
-import { useState, useEffect, useRef, ReactElement } from 'react';
-import Alert, { aletType, variantType, DataAlert } from './alert';
-import Loading from 'cp/loading';
+import React, { ReactChildren, useState } from 'react';
+import Loading from 'cp/loading'
+import { v4 as uuidv4 } from 'uuid';
 
-type DataResult = {
-  error: any,
-  data: any,
+function create<Type>(c: { new(): Type }): Type {
+  return new c();
 }
 
-export type ValidationResult = {
-  enable: boolean,
-  message: string
+enum errorType {
+  required = "required",
+  minlength = "minlength",
 }
 
-type TFormProps<T> = {
-  service: (value: T) => DataResult,
-  children: ReactElement
-  validateFields?: (obj: T, data: DataResult) => ValidationResult,
+interface Props<T extends Canbenew<T>> {
+  children: React.ReactNode,
+  onService: (value: T) => void,
+  textBtn?: string,
 }
 
-const defaultDataAlert: DataAlert = {
-  color: aletType.info,
-  severity: aletType.info,
-  message: "",
-  variant: variantType.filled,
-};
-
-export default function Form<T>({ validateFields, service, children }: TFormProps<T>) {
+export default function Form<T extends canbenew<T>>({ children, textBtn, onService }: Props<T>) {
   const [loading, setLoading] = useState(false);
-  const [alert, setAlert] = useState({ enable: false, data: defaultDataAlert });
 
-  async function handlerSubmit(event: FormEvent<HTMLFormElement>) {
+  function validateError(children: React.ReactNode, isError: boolean): boolean {
+
+    function searchSpan(elementFather: HTMLInputElement | HTMLSelectElement) {
+      for (const child_1 of children) {
+        if (child_1 instanceof HTMLSpanElement) {
+          if (elementFather.id === child_1.dataset.for) {
+            if (elementFather.value === "" && child_1?.dataset.required) {
+              showSpan(child_1, errorType.required)
+              isError = true;
+              break;
+            }
+
+            if (child_1?.minlength ?? elementFather.value.length < parseInt(child_1?.dataset.minlength.split(",")[0])) {
+              showSpan(child_1, errorType.minlength)
+              isError = true;
+              break;
+            }
+          }
+        }
+      }
+    }
+
+    for (const child of children) {
+      if (child instanceof HTMLInputElement) {
+        searchSpan(child);
+      }
+
+      if (child instanceof HTMLSelectElement) {
+        searchSpan(child);
+      }
+
+      if (child?.children) {
+        isError = validateError(child?.children, isError)
+      }
+    }
+
+    //--------------------------------------------------
+
+    if (!isError)
+      for (const child_1 of children) {
+        if (child_1 instanceof HTMLSpanElement) {
+          const span = document.querySelector(`.${child_1.classList[0].trim()}`)
+          span.style.visibility = 'hidden';
+        }
+      }
+
+    return isError;
+  }
+
+  async function handlerSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target);
 
+    setLoading(true)
+
+    const formData = new FormData(event.target);
 
     const formDataObject = {};
     formData.forEach((value, key) => {
       formDataObject[key] = value;
     });
 
-if(validateFields){
-    const _validateFields: ValidationResult = validateFields(formDataObject as T);
-    if (_validateFields && _validateFields.enable) {
-      setAlert({
-        enable: true, data: {
-          color: aletType.info,
-          severity: aletType.info,
-          message: _validateFields.message,
-          variant: variantType.filled,
-        }
-      })
-      return;
-    }
-}
+    let isError: boolean = false;
+    isError = validateError(event.target.children, isError);
 
-    setLoading(true);
-
-    const { error, data } = await service(formDataObject as T)
+    if (!isError)
+      await onService(formDataObject as T);
 
     setLoading(false)
-
-    if (error) {
-      setAlert({
-        enable: true, data: {
-          color: aletType.error,
-          severity: aletType.error,
-          message: error,
-          variant: variantType.filled,
-        }
-      })
-      return;
-    }
-
-    setAlert({
-      enable: true, data: {
-        color: aletType.success,
-        severity: aletType.success,
-        message: data,
-        variant: variantType.filled,
-      }
-    })
-  }
-
-  const StyleForm = {
-    padding: '5px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px'
-  }
-  const StyleFacade = {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    opacity: loading ? '1' : '0',
-    zIndex: '9999',
-    width: loading ? '100%' : '0',
-    height: loading ? '100%' : '0',
-    borderRadius: '3px',
-    borderTop: '2px solid #ffffff4f',
-    borderLeft: '2px solid #ffffff68',
-    borderRight: '2px solid #ffffff84',
-    borderBottom: '2px solid #ffffff9c',
-    boxShadow: '2px 2px 3px 1px black',
-    backgroundColor: '#ffffff22',
-    backdropFilter: 'blur(.9px)',
-    transition: 'width 1.5 ease, height 1.5s ease, opacity 2s ease',
-  }
-  const StyleAlert = {
-    position: 'absolute',
-    top: '10px',
-    left: '50%',
-    zIndex: '99999',
-    transform: 'translateX(-50%)',
-    width: '100%',
-  }
-  const StyleLoading = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    zIndex: '9999',
-    transform: 'translate(-50%,-50%)',
-    display: 'grid',
-    placeContent: 'center'
   }
 
   return (
-    <div>
-      <form onSubmit={handlerSubmit} style={StyleForm}>
-        <div style={StyleFacade}></div>
+    <form onSubmit={handlerSubmit}>
+      {loading && <Loading id='form-load-svg' />}
+      {children}
+      <button>{textBtn ?? "Send"}</button>
+    </form>
+  );
+}
 
-        <div style={StyleLoading}>
-          {loading && <Loading />}
-        </div>
+function showSpan(child: HTMLSpanElement, _errorType: errorType) {
+  const span = document.querySelector(`.${child.classList[0].trim()}`)
+  console.log(span)
+  if (_errorType == errorType.required)
+    span.innerHTML = child.dataset.required;
+  if (_errorType == errorType.minlength)
+    span.innerHTML = child.dataset.minlength.split(",")[1];
 
-        <div style={StyleAlert}>
-          <Alert
-            key='Alert'
-            show={alert.enable}
-            dataAlert={alert.data}
-            exe={() => {
-              setAlert({ enable: false, data: defaultDataAlert });
-            }}
-          />
-        </div>
+  span.style.visibility = "visible";
+}
 
-        {children}
+type SpanProps = {
+  id: string,
+  class: string,
+  htmlFor: string,
+  select?: string,
+  required?: string,
+  minlength?: string,
+}
 
-        <button
-          disabled={loading}
-          type='submit'
-          className='btn'>
-          Send
-        </button>
-      </form>
-    </div>
-  )
+export function Span({ id, htmlFor, select, required, minlength, className = "" }: SpanProps) {
+  const useid = uuidv4();
+
+  const Style = {
+    color: "red",
+    visibility: 'hidden'
+  }
+
+  return (<span
+    id={id}
+    className={`class_${useid.trim()} ${className}`}
+    style={Style}
+    data-select={select}
+    data-for={htmlFor}
+    data-required={required}
+    data-minlength={minlength}
+  ></span >)
+}
+
+function removeDoubleDot(id: string): string {
+  return id.replace(':', '').replace(':', '');
 }

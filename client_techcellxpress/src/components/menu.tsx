@@ -5,15 +5,12 @@ import useStore from "str/store";
 import Session from 'svc/session';
 import { getCookie, setCookie } from 'hp/local_cookie';
 import { useRouter, usePathname } from 'next/navigation';
-import MenuSvg from 'sv/menu_svg';
+import MenuSvg from 'svg/menu_svg';
 import 'st/menu.css';
 
 export default function Menu() {
-  const { session, showMenu, changeVisibilityMenu } = useStore((state) => ({
-    session: state.session,
-    showMenu: state.showMenu, changeVisibilityMenu: state.changeVisibilityMenu
-  }))
-  const [show, setShow] = useState(false);
+  const session = useStore((state) => state.session);
+  const [show, setShow] = useState(false)
   const router = useRouter();
   const path = usePathname();
 
@@ -21,16 +18,6 @@ export default function Menu() {
     setShow(!show)
     router.push(url)
   }
-
-  useEffect(() => {
-    if (!session) {
-      const token = getCookie("access_token")
-      //validate token
-      if (token) {
-        changeVisibilityMenu(true)
-      }
-    }
-  }, [])
 
   function handleLogout(url: string) {
     const user = {
@@ -47,29 +34,27 @@ export default function Menu() {
   return (
     <>
       {
-        showMenu &&
         <div className="menu_bar" >
           <button onClick={() => setShow(!show)}>
             <MenuSvg />
           </button>
 
-          <nav style={{ right: !show && '-400px', visibility: show && "visible" }}>
+          <nav style={{ right: !show && '0px', visibility: show && "visible" }}>
             <ul>
-              {path !== '/' &&
-                <li onClick={() => handleClick('/')}>Home</li>
+              {path !== '/dashboard' &&
+                <li onClick={() => handleClick('/dashboard')}>Home</li>
               }
-              {path !== '/product/add' &&
-                <li onClick={() => handleClick('/product/add')}>Add phone</li>
+              {path !== '/dashboard/product/add' &&
+                <li onClick={() => handleClick('/dashboard/product/add')}>Add phone</li>
               }
-              {path !== '/products' &&
-                <li onClick={() => handleClick('/products')}>List phone</li>
+              {path !== '/dashboard/products' &&
+                <li onClick={() => handleClick('/dashboard/products')}>List phone</li>
               }
-              {path !== '/admin' &&
-                <li onClick={() => handleClick('/admin')}>Admin</li>
+              {path !== '/dashboard/admin' &&
+                <li onClick={() => handleClick('/dashboard/admin')}>Admin</li>
               }
               <li onClick={() => handleLogout()}>Logout</li>
             </ul>
-
           </nav>
         </div>
       }

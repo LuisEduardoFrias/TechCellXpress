@@ -36,6 +36,7 @@ export async function removeAllWithprogress(removeAllWithprogress) {
     });
 
     //
+    let i=0;
     while (i < 1000) {
       i++;
       const progressPercentage = (i / totalRecords) * 100;
