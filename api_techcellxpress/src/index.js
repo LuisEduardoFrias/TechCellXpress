@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import cookieparser from "cookie-parser";
+import cookieParser from "cookie-parser";
 import swaggerUi from 'swagger-ui-express';
 import { createServer } from "http";
+
 
 import sequelize from '../src/libs/db.js';
 import { PORT, PROTOCOL, DOMAIN } from './config.js';
@@ -38,7 +39,7 @@ app.use(app.get('swagger'), swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 app.use(express.text());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieparser());
+app.use(cookieParser());
 app.use(morgan('dev')); // combined
 
 app.use(

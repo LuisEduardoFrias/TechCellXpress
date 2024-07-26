@@ -8,7 +8,7 @@ import Session from 'svc/session'
 import 'st/login.css'
 
 export default function Login() {
-  const login = useStore((state) => state.login)
+  const { login } = useStore((state) => ({ login: state.login }));
   const router = useRouter();
 
   type Credentials = {

@@ -47,8 +47,9 @@ async function _fetch(datafetch: DataFetch) {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
-  //headers.append('Access-Control-Allow-Origin', 'http://localhost:8080');
-  headers.append('Access-Control-Allow-Credentials', 'true');
+  headers.append('Access-Control-Allow-Origin', 'http://localhost:3010');
+  // headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  // headers.append('Access-Control-Allow-Credentials', 'true');
   if (datafetch.token) {
     headers.append('Authorization', `Basic ${datafetch.token}`);
   }
@@ -56,11 +57,13 @@ async function _fetch(datafetch: DataFetch) {
   return await fetch(datafetch.url, {
     method: datafetch.method ?? Method.GET,
     mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    headers: headers,
     redirect: 'follow',
+    //cache: 'no-cache',
+    credentials: 'include',
+    headers: headers,
     referrerPolicy: 'no-referrer',
     body: (datafetch.body ? JSON.stringify(datafetch.body) : null),
   });
 }
+
+

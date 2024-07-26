@@ -17,9 +17,8 @@ export function getCookie(key) {
       .find(e => e.trim().startsWith(`${key}=`));
 
     if (findValue) {
-      const valueString = findValue.split("=")[1];
       try {
-        return JSON.parse(valueString);
+        return findValue.split("=")[1];
       } catch (error) {
         console.error(error)
         return undefined;

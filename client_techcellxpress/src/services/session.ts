@@ -9,17 +9,19 @@ class Session {
       method: Method.POST,
       body: user,
     }
+
     return await Fetch(datafetch);
   }
   //
-  async logOut(session, token) {
+  async logOut(session_, token) {
     const datafetch: DataFetch = {
       url: session.logOut,
       method: Method.POST,
-      body: session,
+      body: session_,
       token: token,
     }
 
+    console.log("logOut: " + JSON.stringify(datafetch))
     return await Fetch(datafetch);
   }
   //
@@ -35,7 +37,7 @@ class Session {
     if (error)
       return { error, data: null }
 
-      return { error: null, data: "Succes" }
+    return { error: null, data: "Succes" }
   }
 }
 

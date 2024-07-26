@@ -102,7 +102,7 @@ export default function Form<T extends canbenew<T>>({ children, textBtn, onServi
 
 function showSpan(child: HTMLSpanElement, _errorType: errorType) {
   const span = document.querySelector(`.${child.classList[0].trim()}`)
-  console.log(span)
+  
   if (_errorType == errorType.required)
     span.innerHTML = child.dataset.required;
   if (_errorType == errorType.minlength)
@@ -121,7 +121,6 @@ type SpanProps = {
 }
 
 export function Span({ id, htmlFor, select, required, minlength, className = "" }: SpanProps) {
-  const useid = uuidv4();
 
   const Style = {
     color: "red",
@@ -130,7 +129,7 @@ export function Span({ id, htmlFor, select, required, minlength, className = "" 
 
   return (<span
     id={id}
-    className={`class_${useid.trim()} ${className}`}
+    className={`class_${htmlFor} ${className}`}
     style={Style}
     data-select={select}
     data-for={htmlFor}

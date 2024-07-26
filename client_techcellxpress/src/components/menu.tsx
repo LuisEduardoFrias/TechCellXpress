@@ -9,7 +9,7 @@ import MenuSvg from 'svg/menu_svg';
 import 'st/menu.css';
 
 export default function Menu() {
-  const session = useStore((state) => state.session);
+  const { session } = useStore((state) => ({ session: state.session }));
   const [show, setShow] = useState(false)
   const router = useRouter();
   const path = usePathname();
@@ -29,6 +29,7 @@ export default function Menu() {
     Session.logOut(user, getCookie("access_token"));
     setCookie("access_token", null)
     setShow(!show)
+    router.push('/login')
   }
 
   return (

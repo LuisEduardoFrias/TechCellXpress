@@ -1,6 +1,6 @@
 //
-import load from 'cp/loading'
+import Load from 'cp/loading'
 
 export default function Loading() {
-  return (<load />);
+  return (<Load />);
 }
