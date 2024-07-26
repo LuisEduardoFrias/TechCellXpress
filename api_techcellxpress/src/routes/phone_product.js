@@ -145,7 +145,7 @@ router.get('/:id', async (req, res) => {
 //
 router.post('/', async (req, res) => {
   const phone = req.body;
-
+  
   try {
     const { error, data } = await PhoneProduct.create(phone);
 

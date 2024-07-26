@@ -13,7 +13,6 @@
 
 #tridente-table th {
   background-color: var(--theme-bg1);
-  ;
   color: #333;
   font-weight: bold;
 }
@@ -23,8 +22,8 @@
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
-  idth: 10%;
-  /* Ajusta el porcentaje según sea necesario */
+  width: 10%;
+  
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -46,7 +45,6 @@ tr.selected {
 
 #tridente-table tbody tr:nth-child(even) {
   background-color: var(--theme-bg1);
-  ;
 }
 
 .btn {

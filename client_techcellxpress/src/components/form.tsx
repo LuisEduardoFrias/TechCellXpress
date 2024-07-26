@@ -23,17 +23,25 @@ export default function Form<T extends canbenew<T>>({ children, textBtn, onServi
 
   function validateError(children: React.ReactNode, isError: boolean): boolean {
 
+    for (const child_1 of children) {
+      if (child_1 instanceof HTMLSpanElement) {
+        hiddenSpan(child_1)
+      }
+    }
+
+    //--------------------------------------------------
+
     function searchSpan(elementFather: HTMLInputElement | HTMLSelectElement) {
       for (const child_1 of children) {
         if (child_1 instanceof HTMLSpanElement) {
           if (elementFather.id === child_1.dataset.for) {
-            if (elementFather.value === "" && child_1?.dataset.required) {
+            if (elementFather.value === "" && child_1?.dataset?.required) {
               showSpan(child_1, errorType.required)
               isError = true;
               break;
             }
 
-            if (child_1?.minlength ?? elementFather.value.length < parseInt(child_1?.dataset.minlength.split(",")[0])) {
+            if (child_1?.dataset.minlength && elementFather.value?.length < parseInt(child_1?.dataset?.minlength?.split(",")[0])) {
               showSpan(child_1, errorType.minlength)
               isError = true;
               break;
@@ -95,20 +103,25 @@ export default function Form<T extends canbenew<T>>({ children, textBtn, onServi
     <form onSubmit={handlerSubmit}>
       {loading && <Loading id='form-load-svg' />}
       {children}
-      <button>{textBtn ?? "Send"}</button>
+      <button disabled={loading}>{textBtn ?? "Send"}</button>
     </form>
   );
 }
 
 function showSpan(child: HTMLSpanElement, _errorType: errorType) {
   const span = document.querySelector(`.${child.classList[0].trim()}`)
-  
+
   if (_errorType == errorType.required)
     span.innerHTML = child.dataset.required;
   if (_errorType == errorType.minlength)
     span.innerHTML = child.dataset.minlength.split(",")[1];
 
   span.style.visibility = "visible";
+}
+
+function hiddenSpan(child: HTMLSpanElement) {
+  const span = document.querySelector(`.${child.classList[0].trim()}`)
+  span.style.visibility = "hidden";
 }
 
 type SpanProps = {
