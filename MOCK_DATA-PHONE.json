@@ -1,652 +1,652 @@
 [
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=",
-    "imei": "62826266262",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFA9zeNwr9YWbB1NxzZ2jnZKegU4bK3t7tpiSDkXXvQ&s",
+    "imei": "123456789012301",
     "brand": "Samsung",
-    "model": "Redmi Note 10",
-    "color": "Orange",
+    "model": "Galaxy S21",
+    "color": "#FF5733",
     "capacity": {
-      "rom": 177,
-      "ramMemory": 13,
-      "processor": "Procesador1"
+      "rom": 128,
+      "ramMemory": 8,
+      "processor": "Snapdragon 888"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2021-01-29"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "6263838",
-    "brand": "OnePlus",
-    "model": "iPhone 13",
-    "color": "Turquoise",
-    "capacity": {
-      "rom": 74,
-      "ramMemory": 3,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "618192",
-    "brand": "Xiaomi",
-    "model": "P40 Pro",
-    "color": "Orange",
-    "capacity": {
-      "rom": 164,
-      "ramMemory": 4,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=",
-    "imei": "82919",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "234567890123402",
     "brand": "Samsung",
-    "model": "OnePlus 9",
-    "color": "Green",
+    "model": "Galaxy S21",
+    "color": "#3366FF",
     "capacity": {
-      "rom": 337,
-      "ramMemory": 11,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "63783",
-    "brand": "Xiaomi",
-    "model": "iPhone 13",
-    "color": "Yellow",
-    "capacity": {
-      "rom": 341,
-      "ramMemory": 3,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "0375",
-    "brand": "OnePlus",
-    "model": "OnePlus 9",
-    "color": "Red",
-    "capacity": {
-      "rom": 145,
+      "rom": 256,
       "ramMemory": 12,
-      "processor": "Procesador5"
+      "processor": "Exynos 990"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2020-08-21"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "15839",
-    "brand": "Xiaomi",
-    "model": "iPhone 13",
-    "color": "Indigo",
-    "capacity": {
-      "rom": 3,
-      "ramMemory": 15,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "6282y73262",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZV29DVRoWsELERNSJo4EIca2neZos0RTynzymVXv5A&s",
+    "imei": "345678901234503",
     "brand": "Samsung",
-    "model": "OnePlus 9",
-    "color": "Red",
+    "model": "Galaxy A52",
+    "color": "#66CC99",
     "capacity": {
-      "rom": 270,
-      "ramMemory": 10,
-      "processor": "Procesador4"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "42427",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Crimson",
-    "capacity": {
-      "rom": 378,
+      "rom": 128,
       "ramMemory": 6,
-      "processor": "Procesador5"
+      "processor": "Snapdragon 720G"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2021-03-26"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "628229y262",
-    "brand": "Apple",
-    "model": "Galaxy s23",
-    "color": "Green",
-    "capacity": {
-      "rom": 314,
-      "ramMemory": 15,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y26373862",
-    "brand": "Huawei",
-    "model": "Galaxy s23",
-    "color": "Mauv",
-    "capacity": {
-      "rom": 85,
-      "ramMemory": 0,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "62842522y262",
-    "brand": "Huawei",
-    "model": "Galaxy s23",
-    "color": "Fuscia",
-    "capacity": {
-      "rom": 329,
-      "ramMemory": 9,
-      "processor": "Procesador4"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y739292262",
-    "brand": "OnePlus",
-    "model": "OnePlus 9",
-    "color": "Crimson",
-    "capacity": {
-      "rom": 504,
-      "ramMemory": 4,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y539262",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "456789012345604",
     "brand": "Samsung",
-    "model": "P40 Pro",
-    "color": "Yellow",
+    "model": "Galaxy Z Fold 2",
+    "color": "#663399",
     "capacity": {
-      "rom": 404,
-      "ramMemory": 13,
-      "processor": "Procesador5"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "6282y252862",
-    "brand": "Huawei",
-    "model": "Galaxy s23",
-    "color": "Purple",
-    "capacity": {
-      "rom": 296,
-      "ramMemory": 4,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y258962",
-    "brand": "Apple",
-    "model": "Redmi Note 10",
-    "color": "Orange",
-    "capacity": {
-      "rom": 277,
-      "ramMemory": 14,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282451y262",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Indigo",
-    "capacity": {
-      "rom": 379,
-      "ramMemory": 9,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y5227262",
-    "brand": "Samsung",
-    "model": "P40 Pro",
-    "color": "Orange",
-    "capacity": {
-      "rom": 172,
-      "ramMemory": 8,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "2628",
-    "brand": "OnePlus",
-    "model": "OnePlus 9",
-    "color": "Yellow",
-    "capacity": {
-      "rom": 208,
-      "ramMemory": 10,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y7282262",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Fuscia",
-    "capacity": {
-      "rom": 385,
-      "ramMemory": 11,
-      "processor": "Procesador4"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "268293",
-    "brand": "Xiaomi",
-    "model": "iPhone 13",
-    "color": "Puce",
-    "capacity": {
-      "rom": 233,
-      "ramMemory": 11,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "2627",
-    "brand": "Huawei",
-    "model": "Redmi Note 10",
-    "color": "Crimson",
-    "capacity": {
-      "rom": 426,
-      "ramMemory": 15,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "8292",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10",
-    "color": "Red",
-    "capacity": {
-      "rom": 103,
-      "ramMemory": 15,
-      "processor": "Procesador4"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "5262",
-    "brand": "Samsung",
-    "model": "OnePlus 9",
-    "color": "Khaki",
-    "capacity": {
-      "rom": 160,
-      "ramMemory": 7,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "252675",
-    "brand": "OnePlus",
-    "model": "Redmi Note 10",
-    "color": "Mauv",
-    "capacity": {
-      "rom": 412,
-      "ramMemory": 11,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "252425",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Turquoise",
-    "capacity": {
-      "rom": 86,
-      "ramMemory": 11,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "5252",
-    "brand": "Huawei",
-    "model": "Redmi Note 10",
-    "color": "Fuscia",
-    "capacity": {
-      "rom": 16,
-      "ramMemory": 16,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "4152",
-    "brand": "OnePlus",
-    "model": "Galaxy s23",
-    "color": "Orange",
-    "capacity": {
-      "rom": 219,
-      "ramMemory": 5,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "5152",
-    "brand": "OnePlus",
-    "model": "P40 Pro",
-    "color": "Goldenrod",
-    "capacity": {
-      "rom": 379,
-      "ramMemory": 8,
-      "processor": "Procesador5"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "1525",
-    "brand": "Apple",
-    "model": "iPhone 13",
-    "color": "Teal",
-    "capacity": {
-      "rom": 428,
-      "ramMemory": 4,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "2526",
-    "brand": "Samsung",
-    "model": "P40 Pro",
-    "color": "Indigo",
-    "capacity": {
-      "rom": 292,
-      "ramMemory": 5,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "252395",
-    "brand": "Huawei",
-    "model": "OnePlus 9",
-    "color": "Pink",
-    "capacity": {
-      "rom": 223,
-      "ramMemory": 8,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "1515",
-    "brand": "Apple",
-    "model": "Redmi Note 10",
-    "color": "Khaki",
-    "capacity": {
-      "rom": 193,
-      "ramMemory": 7,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "7282",
-    "brand": "Samsung",
-    "model": "P40 Pro",
-    "color": "Fuscia",
-    "capacity": {
-      "rom": 276,
-      "ramMemory": 14,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "3783",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Yellow",
-    "capacity": {
-      "rom": 462,
-      "ramMemory": 3,
-      "processor": "Procesador3"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "363",
-    "brand": "OnePlus",
-    "model": "iPhone 13",
-    "color": "Violet",
-    "capacity": {
-      "rom": 123,
-      "ramMemory": 11,
-      "processor": "Procesador4"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "920",
-    "brand": "OnePlus",
-    "model": "OnePlus 9",
-    "color": "Pink",
-    "capacity": {
-      "rom": 444,
-      "ramMemory": 9,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "517",
-    "brand": "Apple",
-    "model": "P40 Pro",
-    "color": "Teal",
-    "capacity": {
-      "rom": 62,
-      "ramMemory": 15,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y266392",
-    "brand": "Huawei",
-    "model": "Redmi Note 10",
-    "color": "Puce",
-    "capacity": {
-      "rom": 278,
-      "ramMemory": 9,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "62416282y262",
-    "brand": "Samsung",
-    "model": "OnePlus 9",
-    "color": "Red",
-    "capacity": {
-      "rom": 232,
-      "ramMemory": 13,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO25ICadfOWsEd6I-Y8QOvgKmoMcWRx3XeIsVbImgW5w&s",
-    "imei": "628241y262",
-    "brand": "Apple",
-    "model": "Redmi Note 10",
-    "color": "Orange",
-    "capacity": {
-      "rom": 28,
-      "ramMemory": 16,
-      "processor": "Procesador5"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "6282y29262",
-    "brand": "OnePlus",
-    "model": "Redmi Note 10",
-    "color": "Khaki",
-    "capacity": {
-      "rom": 218,
-      "ramMemory": 3,
-      "processor": "Procesador1"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "24892",
-    "brand": "Xiaomi",
-    "model": "OnePlus 9",
-    "color": "Crimson",
-    "capacity": {
-      "rom": 441,
+      "rom": 256,
       "ramMemory": 12,
-      "processor": "Procesador2"
+      "processor": "Snapdragon 865+"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2020-09-18"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuwG17h-i1BVzQEyiA_WFq7O0Ww9cBUV2iaYeK6EbPQ&s=",
-    "imei": "582",
-    "brand": "OnePlus",
-    "model": "Redmi Note 10",
-    "color": "Pink",
-    "capacity": {
-      "rom": 224,
-      "ramMemory": 1,
-      "processor": "Procesador2"
-    },
-    "releaseDate": "2/2/2022"
-  },
-  {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "5383",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "567890123456705",
     "brand": "Samsung",
-    "model": "OnePlus 9",
-    "color": "Turquoise",
+    "model": "Galaxy S20 FE",
+    "color": "#FF3366",
     "capacity": {
-      "rom": 295,
-      "ramMemory": 16,
-      "processor": "Procesador4"
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 865"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2020-10-02"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "5280",
-    "brand": "Huawei",
-    "model": "Galaxy s23",
-    "color": "Blue",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "678901234567806",
+    "brand": "Samsung",
+    "model": "Galaxy A72",
+    "color": "#99CC00",
     "capacity": {
-      "rom": 388,
-      "ramMemory": 9,
-      "processor": "Procesador3"
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Snapdragon 720G"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2021-03-26"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "528268",
-    "brand": "Xiaomi",
-    "model": "P40 Pro",
-    "color": "Indigo",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "789012345678907",
+    "brand": "Samsung",
+    "model": "Galaxy S10",
+    "color": "#FFFF00",
     "capacity": {
-      "rom": 114,
-      "ramMemory": 13,
-      "processor": "Procesador5"
+      "rom": 128,
+      "ramMemory": 8,
+      "processor": "Snapdragon 855"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2019-03-08"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "35700",
-    "brand": "Xiaomi",
-    "model": "Galaxy s23",
-    "color": "Aquamarine",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "890123456789008",
+    "brand": "Samsung",
+    "model": "Galaxy A32",
+    "color": "#3399FF",
     "capacity": {
-      "rom": 142,
+      "rom": 128,
+      "ramMemory": 4,
+      "processor": "Helio G80"
+    },
+    "releaseDate": "2021-03-05"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "901234567890109",
+    "brand": "Samsung",
+    "model": "Galaxy Note 10",
+    "color": "#9900CC",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Exynos 9825"
+    },
+    "releaseDate": "2019-08-23"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "012345678901210",
+    "brand": "Samsung",
+    "model": "Galaxy S9",
+    "color": "#336633",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Exynos 9810"
+    },
+    "releaseDate": "2018-03-16"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "123456789012311",
+    "brand": "LG",
+    "model": "V60 ThinQ",
+    "color": "#FF5733",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Snapdragon 865"
+    },
+    "releaseDate": "2020-03-20"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "234567890123412",
+    "brand": "LG",
+    "model": "G8 ThinQ",
+    "color": "#3366FF",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 855"
+    },
+    "releaseDate": "2019-04-11"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "345678901234513",
+    "brand": "LG",
+    "model": "Velvet",
+    "color": "#66CC99",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 765G"
+    },
+    "releaseDate": "2020-07-22"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "456789012345614",
+    "brand": "LG",
+    "model": "G7 ThinQ",
+    "color": "#663399",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Snapdragon 845"
+    },
+    "releaseDate": "2018-05-02"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "567890123456715",
+    "brand": "LG",
+    "model": "V40 ThinQ",
+    "color": "#FF3366",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 845"
+    },
+    "releaseDate": "2018-10-03"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "678901234567816",
+    "brand": "LG",
+    "model": "G6",
+    "color": "#99CC00",
+    "capacity": {
+      "rom": 32,
+      "ramMemory": 4,
+      "processor": "Snapdragon 821"
+    },
+    "releaseDate": "2017-03-10"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "789012345678917",
+    "brand": "LG",
+    "model": "G5",
+    "color": "#FFFF00",
+    "capacity": {
+      "rom": 32,
+      "ramMemory": 4,
+      "processor": "Snapdragon 820"
+    },
+    "releaseDate": "2016-04-01"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "890123456789018",
+    "brand": "LG",
+    "model": "V30",
+    "color": "#3399FF",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Snapdragon 835"
+    },
+    "releaseDate": "2017-09-21"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "901234567890119",
+    "brand": "LG",
+    "model": "V30",
+    "color": "#9900CC",
+    "capacity": {
+      "rom": 32,
+      "ramMemory": 3,
+      "processor": "Snapdragon 808"
+    },
+    "releaseDate": "2015-04-29"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "012345678901220",
+    "brand": "LG",
+    "model": "V30",
+    "color": "#336633",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Snapdragon 820"
+    },
+    "releaseDate": "2016-10-28"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "123456789012321",
+    "brand": "iPhone",
+    "model": "12 Pro",
+    "color": "#FF5733",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 6,
+      "processor": "A14 Bionic"
+    },
+    "releaseDate": "2020-10-23"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "234567890123422",
+    "brand": "iPhone",
+    "model": "11",
+    "color": "#3366FF",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 4,
+      "processor": "A13 Bionic"
+    },
+    "releaseDate": "2019-09-20"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "345678901234523",
+    "brand": "iPhone",
+    "model": "SE (2020)",
+    "color": "#66CC99",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 3,
+      "processor": "A13 Bionic"
+    },
+    "releaseDate": "2020-04-24"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "456789012345624",
+    "brand": "iPhone",
+    "model": "XR",
+    "color": "#663399",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 3,
+      "processor": "A12 Bionic"
+    },
+    "releaseDate": "2018-10-26"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "567890123456725",
+    "brand": "iPhone",
+    "model": "8 Plus",
+    "color": "#FF3366",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 3,
+      "processor": "A11 Bionic"
+    },
+    "releaseDate": "2017-09-22"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "678901234567826",
+    "brand": "iPhone",
+    "model": "X",
+    "color": "#99CC00",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 3,
+      "processor": "A11 Bionic"
+    },
+    "releaseDate": "2017-11-03"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "789012345678927",
+    "brand": "iPhone",
+    "model": "7",
+    "color": "#FFFF00",
+    "capacity": {
+      "rom": 128,
       "ramMemory": 2,
-      "processor": "Procesador1"
+      "processor": "A10 Fusion"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2016-09-16"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "389",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "890123456789028",
+    "brand": "iPhone",
+    "model": "6S",
+    "color": "#3399FF",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 2,
+      "processor": "A9"
+    },
+    "releaseDate": "2015-09-25"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "901234567890129",
+    "brand": "iPhone",
+    "model": "5S",
+    "color": "#9900CC",
+    "capacity": {
+      "rom": 32,
+      "ramMemory": 1,
+      "processor": "A7"
+    },
+    "releaseDate": "2013-09-20"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "012345678901230",
+    "brand": "iPhone",
+    "model": "4S",
+    "color": "#336633",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 1,
+      "processor": "A5"
+    },
+    "releaseDate": "2011-10-14"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "123456789012331",
     "brand": "Huawei",
-    "model": "OnePlus 9",
-    "color": "Red",
+    "model": "P40 Pro",
+    "color": "#FF5733",
     "capacity": {
-      "rom": 187,
-      "ramMemory": 16,
-      "processor": "Procesador3"
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Kirin 990 5G"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2020-04-07"
   },
   {
-    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEeX_OFMrn97ZtMxkSpYjo2hqaL81abwnEm_JDM0mlxg&s",
-    "imei": "2027",
-    "brand": "Samsung",
-    "model": "P40 Pro",
-    "color": "Khaki",
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "234567890123432",
+    "brand": "Huawei",
+    "model": "Mate 40 Pro",
+    "color": "#3366FF",
     "capacity": {
-      "rom": 413,
-      "ramMemory": 14,
-      "processor": "Procesador4"
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Kirin 9000"
     },
-    "releaseDate": "2/2/2022"
+    "releaseDate": "2020-10-22"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "345678901234533",
+    "brand": "Huawei",
+    "model": "P30 Pro",
+    "color": "#66CC99",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Kirin 980"
+    },
+    "releaseDate": "2019-03-26"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "456789012345634",
+    "brand": "Huawei",
+    "model": "Mate 20 Pro",
+    "color": "#663399",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Kirin 980"
+    },
+    "releaseDate": "2018-10-16"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "567890123456735",
+    "brand": "Huawei",
+    "model": "P20 Pro",
+    "color": "#FF3366",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Kirin 970"
+    },
+    "releaseDate": "2018-03-27"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "678901234567836",
+    "brand": "Huawei",
+    "model": "P20 Pro",
+    "color": "#99CC00",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Kirin 970"
+    },
+    "releaseDate": "2017-10-17"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "789012345678937",
+    "brand": "Huawei",
+    "model": "P20 Pro",
+    "color": "#FFFF00",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Kirin 960"
+    },
+    "releaseDate": "2017-04-05"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "890123456789038",
+    "brand": "Huawei",
+    "model": "P20 Pro",
+    "color": "#3399FF",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Kirin 960"
+    },
+    "releaseDate": "2016-11-03"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "901234567890139",
+    "brand": "Huawei",
+    "model": "P9 Plus",
+    "color": "#9900CC",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Kirin 955"
+    },
+    "releaseDate": "2016-08-17"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "012345678901240",
+    "brand": "Huawei",
+    "model": "Mate 8",
+    "color": "#336633",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Kirin 950"
+    },
+    "releaseDate": "2015-11-26"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "123456789012341",
+    "brand": "Xiaomi",
+    "model": "Mi 11",
+    "color": "#FF5733",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 12,
+      "processor": "Snapdragon 888"
+    },
+    "releaseDate": "2020-12-28"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "234567890123442",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "color": "#3366FF",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 8,
+      "processor": "Snapdragon 732G"
+    },
+    "releaseDate": "2021-03-04"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "345678901234543",
+    "brand": "Xiaomi",
+    "model": "Mi 10T Pro",
+    "color": "#66CC99",
+    "capacity": {
+      "rom": 256,
+      "ramMemory": 8,
+      "processor": "Snapdragon 865"
+    },
+    "releaseDate": "2020-10-01"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "456789012345644",
+    "brand": "Xiaomi",
+    "model": "Poco X3 NFC",
+    "color": "#663399",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 732G"
+    },
+    "releaseDate": "2020-09-07"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "567890123456745",
+    "brand": "Xiaomi",
+    "model": "Mi 9",
+    "color": "#FF3366",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 855"
+    },
+    "releaseDate": "2019-06-12"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "678901234567846",
+    "brand": "Xiaomi",
+    "model": "Mi 9",
+    "color": "#99CC00",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Helio G90T"
+    },
+    "releaseDate": "2019-10-21"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "789012345678947",
+    "brand": "Xiaomi",
+    "model": "Mi 9",
+    "color": "#FFFF00",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 855"
+    },
+    "releaseDate": "2019-02-20"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "890123456789048",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7",
+    "color": "#3399FF",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Snapdragon 660"
+    },
+    "releaseDate": "2019-01-10"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "901234567890149",
+    "brand": "Xiaomi",
+    "model": "Mi Mix 3",
+    "color": "#9900CC",
+    "capacity": {
+      "rom": 128,
+      "ramMemory": 6,
+      "processor": "Snapdragon 845"
+    },
+    "releaseDate": "2018-11-01"
+  },
+  {
+    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imei": "012345678901250",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 5",
+    "color": "#336633",
+    "capacity": {
+      "rom": 64,
+      "ramMemory": 4,
+      "processor": "Snapdragon 636"
+    },
+    "releaseDate": "2018-02-14"
   }
 ]

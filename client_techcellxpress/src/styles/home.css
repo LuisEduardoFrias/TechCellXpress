@@ -4,30 +4,40 @@
   
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: 80px 1fr;
   grid-template-areas: "filter" "container";
   grid-row-gap: 15px;
 }
 
 .filter {
   grid-area: filter;
+  padding-inline-start: 15px;
   height: 100%;
   color: black;
   background-color: var(--theme-bg1);
   
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 18px);
+  grid-template-areas: "search search" "selectModel selectColor";
+  grid-row-gap: 15px;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-content: center;
   
   >label {
+    grid-area: search;
     font-weight: bold;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
+    width: 100%;
+    height: 25px;
     
     >input {
       width: 200px;
       height: 25px;
+      border-radius: 5px;
     }
     
     >input:focus {
@@ -37,10 +47,19 @@
     }
   }
   
+  >select:nth-child(2) {
+    grid-area: selectModel;
+  }
+  
+  >select:nth-child(3) {
+    grid-area: selectColor;
+  }
+  
   >select {
     width: 150px;
     height: 25px;
     background-color: black;
+    border-radius: 5px;
   }
 }
 
@@ -54,13 +73,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .container-card {
-  min-width: 200px;
-  height: fill;
+  width: 200px;
+  height: 200px;
   border: var(--border-width) solid var(--border-color1);
   background-color: var(--theme-bg1);
   border-radius: Calc(var(--border-radius) + 5px);
@@ -95,22 +114,19 @@
   }
 }
 
-@media (width < 800px) {
+@media (width > 700px) {
   .container-home {
     grid-template-rows: 80px 1fr;
   }
   
   .filter {
-    padding-inline: 5px;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr repeat(2, 200px);
+    grid-template-rows: 18px;
+    grid-template-areas: "search selectModel selectColor";
+    justify-content: flex-start;
     
     >label {
-      width: 100%;
-      
-      >input {
-        width: 100%;
-      }
+      justify-self: start;
     }
   }
 }

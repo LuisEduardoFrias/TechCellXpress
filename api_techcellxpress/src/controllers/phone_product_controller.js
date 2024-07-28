@@ -27,6 +27,35 @@ export default class PhoneProduct {
     return { error: 'default error', data: null }
   }
   //
+  static async search(text = null) {
+
+    const { error, data } = await PhoneProduct.read();
+
+    if (!data) return { error: 'No data found.', data: null };
+
+    function map(_data) {
+      return _data.map(e => ({
+        brand: e.brand,
+        model: e.model,
+        imgUrl: e.imgUrl,
+        color: e.color
+      }))
+    }
+
+    if (text === "undefined") {
+      return {
+        error: null, data: map(data)
+      };
+    }
+
+    const filterData = data.filter(e => {
+      const fullName = `${e.brand} ${e.model}`;
+      return fullName.includes(text);
+    });
+
+    return { error: null, data: map(filterData) };
+  }
+  //
   static async readById(id) {
     const data = await selectById(id);
 

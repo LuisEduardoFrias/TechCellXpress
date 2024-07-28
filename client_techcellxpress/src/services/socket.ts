@@ -2,26 +2,23 @@
 import { io } from 'socket.io-client'
 import { baseApiTechcellxpress } from 'hp/api_router'
 
-export default function Socket(url: string) {
-  const socket = io(baseApiTechcellxpress, {
-    autoConnect: false
-  });
+export default function socket(url: string) {
+  const socket = io(baseApiTechcellxpress, { autoConnect: false });
 
-  function connet(text: string, fn: (value: number) => void) {
+  function ioConnet(connetName: string, fn: (value: number) => void) {
     socket.connect();
-    socket.on(text, (nuevoProgreso: number) => {
+    socket.on(connetName, (nuevoProgreso: number) => {
       fn(nuevoProgreso);
     });
-
   }
 
-  function emit(emition: string, token: string) {
+  function ioEmit(emition: string, token: string) {
     socket.emit(emition, token);
   }
 
-  function close() {
+  function ioClose() {
     socket.disconnect();
   }
 
-  return [connet, emit, close]
+  return [ioConnet, ioEmit, ioClose]
 };
