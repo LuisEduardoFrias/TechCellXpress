@@ -1,9 +1,9 @@
 //
 'use client'
 import React, { useState, useEffect } from 'react';
-import SuccesSvg from 'sv/success_svg'
-import ErrorSvg from 'sv/error_svg'
-import InfoSvg from 'sv/info_svg'
+import SuccesSvg from 'svg/success_svg'
+import ErrorSvg from 'svg/error_svg'
+import InfoSvg from 'svg/info_svg'
 import 'st/alert.css'
 
 export enum aletType {
@@ -49,12 +49,13 @@ export default function Alert({ show, exe, dataAlert }: AlertProps) {
   useEffect(() => {
     setVisible(show);
     const timer = setTimeout(() => {
-      exe();
+      if (exe)
+        exe();
       setVisible(false);
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [show]);
+  }, [show, exe]);
 
   if (!visible) {
     return null;
@@ -87,11 +88,11 @@ export default function Alert({ show, exe, dataAlert }: AlertProps) {
   );
 }
 
-function firstUC(text) {
+function firstUC(text: string) {
   if (!text) return text;
-  try{
-  return text?.charAt(0).toUpperCase() + text?.slice(1);
-  }catch(error){
+  try {
+    return text?.charAt(0).toUpperCase() + text?.slice(1);
+  } catch (error) {
     console.error(error);
     return text;
   }

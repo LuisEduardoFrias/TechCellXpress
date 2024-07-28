@@ -47,7 +47,7 @@ async function _fetch(datafetch: DataFetch) {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
-  headers.append('Access-Control-Allow-Origin', 'http://localhost:3010');
+  headers.append('Access-Control-Allow-Origin', process.env.BASE_API_TECHCELLXPRESS);
   // headers.append('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   // headers.append('Access-Control-Allow-Credentials', 'true');
   if (datafetch.token) {

@@ -26,7 +26,15 @@ export default function useFetch(baseUrl: string) {
   const [dataFetch, setFetch] = useState<FetchObj>(null);
   const [data, setData] = useState<Result>({ data: null, error: null });
   const [loading, setLoading] = useState(false);
-  function _fetch({ url, method = Method.GET, body = null }: FetchObj) {
+
+  function joinURLs(baseUrl: string, url: string): string {
+    const baseUrlFinal = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+    const urlFinal = url.startsWith('/') ? url.substring(1) : url;
+
+    return baseUrlFinal + urlFinal;
+  }
+
+  const _fetch = useCallback(({ url, method = Method.GET, body = null }: FetchObj) => {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
@@ -45,50 +53,43 @@ export default function useFetch(baseUrl: string) {
       referrerPolicy: 'no-referrer',
       body: method === Method.GET ? null : (body ? JSON.stringify(body) : null),
     });
-  }
-
-  function joinURLs(baseUrl: string, url: string): string {
-    const baseUrlFinal = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
-    const urlFinal = url.startsWith('/') ? url.substring(1) : url;
-
-    return baseUrlFinal + urlFinal;
-  }
+  }, [baseUrl, session]);
 
   useEffect(() => {
     if (dataFetch) {
       setData({ data: null, error: null });
       setLoading(true);
 
-      setTimeout(() => {
-        _fetch(dataFetch)
-          .then((response) => {
-            console.log(
-              'statustext: ',
-              response.statusText,
-              'status: ',
-              response.status
-            );
+      //setTimeout(() => {
+      _fetch(dataFetch)
+        .then((response) => {
+          console.log(
+            'statustext: ',
+            response.statusText,
+            'status: ',
+            response.status
+          );
 
-            if (!response.ok) {
-              throw new Error('Error al recuperar el HTML');
-            }
+          if (!response.ok) {
+            throw new Error('Error al recuperar el HTML');
+          }
 
-            return response.json();
-          })
-          .then((data) => {
-            setData({ data: data, error: null });
-          })
-          .catch((err) => {
-            console.log('fetch: ', err);
-            setData({ data: null, error: 'Hubo un problema con la solicitud' });
-          })
-          .finally(() => {
-            setLoading(false);
-            setFetch(null);
-          });
-      }, 1000);
+          return response.json();
+        })
+        .then((data) => {
+          setData({ data: data, error: null });
+        })
+        .catch((err) => {
+          console.log('fetch: ', err);
+          setData({ data: null, error: 'Hubo un problema con la solicitud' });
+        })
+        .finally(() => {
+          setLoading(false);
+          setFetch(null);
+        });
+      //}, 1000);
     }
-  }, [dataFetch]);
+  }, [dataFetch, _fetch]);
 
   return [setFetch, data, loading];
 }

@@ -1,7 +1,6 @@
 "use client"
-import React, { ReactChildren, useState } from 'react';
+import React, { isValidElement, useState } from 'react';
 import Loading from 'cp/loading'
-import { v4 as uuidv4 } from 'uuid';
 
 function create<Type>(c: { new(): Type }): Type {
   return new c();
@@ -12,91 +11,93 @@ enum errorType {
   minlength = "minlength",
 }
 
-interface Props<T extends Canbenew<T>> {
+interface Props<T> {
   children: React.ReactNode,
   onService: (value: T) => void,
   textBtn?: string,
 }
 
-export default function Form<T extends canbenew<T>>({ children, textBtn, onService }: Props<T>) {
+export default function Form<T>({ children, textBtn, onService }: Props<T>) {
   const [loading, setLoading] = useState(false);
 
   function validateError(children: React.ReactNode, isError: boolean): boolean {
-
-    for (const child_1 of children) {
-      if (child_1 instanceof HTMLSpanElement) {
-        hiddenSpan(child_1)
-      }
-    }
-
-    //--------------------------------------------------
-
-    function searchSpan(elementFather: HTMLInputElement | HTMLSelectElement) {
-      for (const child_1 of children) {
-        if (child_1 instanceof HTMLSpanElement) {
-          if (elementFather.id === child_1.dataset.for) {
-            if (elementFather.value === "" && child_1?.dataset?.required) {
-              showSpan(child_1, errorType.required)
-              isError = true;
-              break;
+    /*
+        React.Children.map(children, (child) => {
+          if (child instanceof HTMLSpanElement) {
+            hiddenSpan(child)
+          }
+        });
+    
+        //--------------------------------------------------
+    
+        function searchSpan(elementFather: HTMLInputElement | HTMLSelectElement) {
+          React.Children.map(children, (child_1) => {
+            if (child_1 instanceof HTMLSpanElement) {
+              if (elementFather.id === child_1.dataset.for) {
+                if (elementFather.value === "" && child_1?.dataset?.required) {
+                  showSpan(child_1, errorType.required)
+                  isError = true;
+                  return;
+                }
+    
+                if (child_1?.dataset.minlength && elementFather.value?.length < parseInt(child_1?.dataset?.minlength?.split(",")[0])) {
+                  showSpan(child_1, errorType.minlength)
+                  isError = true;
+                  return;
+                }
+              }
             }
-
-            if (child_1?.dataset.minlength && elementFather.value?.length < parseInt(child_1?.dataset?.minlength?.split(",")[0])) {
-              showSpan(child_1, errorType.minlength)
-              isError = true;
-              break;
+          })
+        }
+    
+        React.Children.map(children, (child: React.ReactNode) => {
+          if (isValidElement(child)) {
+            const element = child as unknown as HTMLElement;
+            if (element instanceof HTMLInputElement) {
+              searchSpan(element as HTMLInputElement);
+            } else if (element instanceof HTMLSelectElement) {
+              searchSpan(element as HTMLSelectElement);
+            } else if (React.Children.count(element.props.children) > 0) {
+              isError = validateError(element.props.children, isError);
             }
           }
-        }
-      }
-    }
-
-    for (const child of children) {
-      if (child instanceof HTMLInputElement) {
-        searchSpan(child);
-      }
-
-      if (child instanceof HTMLSelectElement) {
-        searchSpan(child);
-      }
-
-      if (child?.children) {
-        isError = validateError(child?.children, isError)
-      }
-    }
-
-    //--------------------------------------------------
-
-    if (!isError)
-      for (const child_1 of children) {
-        if (child_1 instanceof HTMLSpanElement) {
-          const span = document.querySelector(`.${child_1.classList[0].trim()}`)
-          span.style.visibility = 'hidden';
-        }
-      }
-
-    return isError;
+        });
+    
+        //--------------------------------------------------
+    
+        if (!isError)
+          React.Children.map(children, (child) => {
+            if (child instanceof HTMLSpanElement) {
+              hiddenSpan(child)
+            }
+          });
+    
+        return isError;
+        */
+    return false;
   }
 
   async function handlerSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setLoading(true)
+    setLoading(true);
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
 
-    const formDataObject = {};
+    const formDataObject: { [key: string]: string } = {};
     formData.forEach((value, key) => {
-      formDataObject[key] = value;
+      formDataObject[key] = value.toString();
     });
 
     let isError: boolean = false;
-    isError = validateError(event.target.children, isError);
+    const childrenArray: Element[] = Array.from((event.target as HTMLFormElement).children);
+    isError = validateError(childrenArray, isError);
 
-    if (!isError)
+    if (!isError) {
       await onService(formDataObject as T);
+    }
 
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
@@ -109,7 +110,7 @@ export default function Form<T extends canbenew<T>>({ children, textBtn, onServi
 }
 
 function showSpan(child: HTMLSpanElement, _errorType: errorType) {
-  const span = document.querySelector(`.${child.classList[0].trim()}`)
+  const span: HTMLSpanElement = document.querySelector(`.${child.classList[0].trim()}`)
 
   if (_errorType == errorType.required)
     span.innerHTML = child.dataset.required;
@@ -120,14 +121,14 @@ function showSpan(child: HTMLSpanElement, _errorType: errorType) {
 }
 
 function hiddenSpan(child: HTMLSpanElement) {
-  const span = document.querySelector(`.${child.classList[0].trim()}`)
+  const span: HTMLSpanElement = document.querySelector(`.${child.classList[0].trim()}`)
   span.style.visibility = "hidden";
 }
 
 type SpanProps = {
   id: string,
-  class: string,
   htmlFor: string,
+  className?: string,
   select?: string,
   required?: string,
   minlength?: string,
@@ -135,7 +136,7 @@ type SpanProps = {
 
 export function Span({ id, htmlFor, select, required, minlength, className = "" }: SpanProps) {
 
-  const Style = {
+  const Style: React.CSSProperties = {
     color: "red",
     visibility: 'hidden'
   }

@@ -32,9 +32,6 @@
       "hk/*": [
         "./src/hooks/*"
       ],
-      "rc/*": [
-        "./src/reducers/*"
-      ],
       "st/*": [
         "./src/styles/*"
       ],
@@ -44,7 +41,7 @@
       "str/*": [
         "./src/store/*"
       ],
-      "svc/*": [
+      "sv/*": [
         "./src/services/*"
       ],
       "hp/*": [

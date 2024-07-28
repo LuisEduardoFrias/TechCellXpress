@@ -1,6 +1,6 @@
 //
-import Fetch, { Method, DataFetch } from "../helpers/fetch"
-import { product as pdt } from '../helpers/api_router'
+import Fetch, { Method, DataFetch } from "hp/fetch"
+import { product as pdt } from 'hp/api_router'
 
 class Product {
   async get(token) {
@@ -69,4 +69,5 @@ class Product {
   }
 }
 
-export default new Product();
+const product = new Product();
+export default product;

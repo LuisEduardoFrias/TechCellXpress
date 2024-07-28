@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import useStore from 'str/store';
 import Form, { Span } from 'cp/form';
-import Session from 'svc/session'
+import Session from 'sv/session'
 import 'st/login.css'
 
 export default function Login() {

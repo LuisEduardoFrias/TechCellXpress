@@ -2,7 +2,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import useStore from "str/store";
-import Session from 'svc/session';
+import Session from 'sv/session';
 import { getCookie, setCookie } from 'hp/local_cookie';
 import { useRouter, usePathname } from 'next/navigation';
 import MenuSvg from 'svg/menu_svg';

@@ -12,7 +12,7 @@ const useStore = create<GlobalState>((set) =>
   changeVisibilityMenu: () => set((state) => ({ showMenu: true })),
 }));
 
-GetSession().then((session) => {
+GetSession().then((session: UserDto) => {
   useStore.setState({ ...useStore.getState(), session: session });
 });
 

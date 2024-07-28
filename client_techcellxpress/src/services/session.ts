@@ -1,11 +1,11 @@
 //
-import Fetch, { Method, DataFetch } from "../helpers/fetch"
-import { session } from '../helpers/api_router'
+import Fetch, { Method, DataFetch } from "hp/fetch"
+import { session as _session} from 'hp/api_router'
 
 class Session {
   async logIn(user) {
     const datafetch: DataFetch = {
-      url: session.logIn,
+      url: _session.logIn,
       method: Method.POST,
       body: user,
     }
@@ -15,7 +15,7 @@ class Session {
   //
   async logOut(session_, token) {
     const datafetch: DataFetch = {
-      url: session.logOut,
+      url: _session.logOut,
       method: Method.POST,
       body: session_,
       token: token,
@@ -27,7 +27,7 @@ class Session {
   //
   async register(user) {
     const datafetch: DataFetch = {
-      url: session.register,
+      url: _session.register,
       method: Method.POST,
       body: user,
     }
@@ -41,4 +41,5 @@ class Session {
   }
 }
 
-export default new Session();
+const session = new Session();
+export default session;

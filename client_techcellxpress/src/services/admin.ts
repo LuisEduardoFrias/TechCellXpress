@@ -1,11 +1,11 @@
 //
-import Fetch, { Method, DataFetch } from '../helpers/fetch'
-import { admin } from '../helpers/api_router'
+import Fetch, { Method, DataFetch } from 'hp/fetch'
+import { admin as _admin } from 'hp/api_router'
 
 class Admin {
   async loadProducts(phones, token) {
     const datafetch: DataFetch = {
-      url: admin.loadProducts,
+      url: _admin.loadProducts,
       method: Method.POST,
       body: phones,
       token: token,
@@ -16,7 +16,7 @@ class Admin {
   //
   async removeAll(token) {
     const datafetch: DataFetch = {
-      url: admin.removeAll,
+      url: _admin.removeAll,
       method: Method.DELETE,
       token: token,
     }
@@ -25,4 +25,5 @@ class Admin {
   }
 }
 
-export default new Admin();
+const admin = new Admin();
+export default admin;

@@ -19,36 +19,36 @@ export default function Table({ data, headers = [], handlerDelete, handlerUpdate
     setCurrentPage(1);
   };
 
-  const totalPages = data ? Math.ceil(data?.length / pageSize) : 0;
-  const paginatedData = data ? data?.slice((currentPage - 1) * pageSize, currentPage * pageSize) : 0;
+  const totalPages = data ? Math.ceil(data?.length / pageSize) : [];
+  const paginatedData = data ? data?.slice((currentPage - 1) * pageSize,currentPage * pageSize) : [];
 
-const renderHeaders = () => {
-  if ((handlerDelete || handlerUpdate) && data.length > 0) {
-    return [
-      ...Object.keys(data[0]).map((key) => <th key={key}>{key}</th>),
-      handlerUpdate && <th key="updateHeader">Update</th>,
-      handlerDelete && <th key="deleteHeader">Delete</th>
-    ];
-  } else {
-    return headers.map((header) => <th key={header}>{header}</th>);
-  }
-};
+  const renderHeaders = () => {
+    if ((handlerDelete || handlerUpdate) && data.length > 0) {
+      return [
+        ...Object.keys(data[0]).map((key) => <th key={key}>{key}</th>),
+        handlerUpdate && <th key="updateHeader">Update</th>,
+        handlerDelete && <th key="deleteHeader">Delete</th>
+      ];
+    } else {
+      return headers.map((header) => <th key={header}>{header}</th>);
+    }
+  };
 
   const renderRows = () => {
-  return paginatedData.map((item: any, index) => (
-    <tr key={index}>
-      {Object.keys(item).map((key) => (
-        <td key={key}>{item[key]}</td>
-      ))}
-      {handlerDelete && handlerUpdate && (
-        <>
-          <td><button className="btn btn-update" onClick={() => handlerUpdate(item.id || index)}>Update</button></td>
-          <td><button className="btn btn-delete" onClick={() => handlerDelete(item.id || index)}>Delete</button></td>
-        </>
-      )}
-    </tr>
-  ));
-};
+    return paginatedData.map((item: any, index) => (
+      <tr key={index}>
+        {Object.keys(item).map((key) => (
+          <td key={key}>{item[key]}</td>
+        ))}
+        {handlerDelete && handlerUpdate && (
+          <>
+            <td><button className="btn btn-update" onClick={() => handlerUpdate(item.id || index)}>Update</button></td>
+            <td><button className="btn btn-delete" onClick={() => handlerDelete(item.id || index)}>Delete</button></td>
+          </>
+        )}
+      </tr>
+    ));
+  };
 
   return (
     <>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Form, { Span } from 'cp/form';
 import { useRouter } from 'next/navigation';
-import Session from 'svc/session'
+import Session from 'sv/session'
 import type UserModel from '../../../../../cross_techcellxpress/models/user_model.js'
 import 'st/register.css'
 
