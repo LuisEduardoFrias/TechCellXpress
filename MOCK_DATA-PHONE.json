@@ -13,7 +13,7 @@
     "releaseDate": "2021-01-29"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/15098698-1000-1000/image-37bd6f3549b341b6b79daa338b773e52.jpg?v=638279221995800000",
     "imei": "234567890123402",
     "brand": "Samsung",
     "model": "Galaxy S21",
@@ -39,7 +39,7 @@
     "releaseDate": "2021-03-26"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-63759/samsung_galaxy_z-fold2-1.jpg",
     "imei": "456789012345604",
     "brand": "Samsung",
     "model": "Galaxy Z Fold 2",
@@ -52,7 +52,7 @@
     "releaseDate": "2020-09-18"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-70557/galaxys20fe_front_back_white-1.jpg",
     "imei": "567890123456705",
     "brand": "Samsung",
     "model": "Galaxy S20 FE",
@@ -65,7 +65,7 @@
     "releaseDate": "2020-10-02"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/9628583-1000-1000/image-dc2ac8ced2a9488492b64e99ae8585c2.jpg?v=637932135059500000",
     "imei": "678901234567806",
     "brand": "Samsung",
     "model": "Galaxy A72",
@@ -78,7 +78,7 @@
     "releaseDate": "2021-03-26"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-26542/GalaxyS10Plus.jpg",
     "imei": "789012345678907",
     "brand": "Samsung",
     "model": "Galaxy S10",
@@ -91,7 +91,7 @@
     "releaseDate": "2019-03-08"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/4629434-1000-1000/image-d7911f0facd8485baa992012a22b5ec1.jpg?v=637657929150470000",
     "imei": "890123456789008",
     "brand": "Samsung",
     "model": "Galaxy A32",
@@ -104,7 +104,7 @@
     "releaseDate": "2021-03-05"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-34926/galaxynote10plus.jpg",
     "imei": "901234567890109",
     "brand": "Samsung",
     "model": "Galaxy Note 10",
@@ -117,7 +117,7 @@
     "releaseDate": "2019-08-23"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2018/07/Samsung_GalaxyS9Plus.jpg",
     "imei": "012345678901210",
     "brand": "Samsung",
     "model": "Galaxy S9",
@@ -130,7 +130,7 @@
     "releaseDate": "2018-03-16"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-49227/LG-V60_ThinQ.jpg",
     "imei": "123456789012311",
     "brand": "LG",
     "model": "V60 ThinQ",
@@ -143,7 +143,7 @@
     "releaseDate": "2020-03-20"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-28909/LG-G8ThinQ_title.jpg",
     "imei": "234567890123412",
     "brand": "LG",
     "model": "G8 ThinQ",
@@ -156,7 +156,7 @@
     "releaseDate": "2019-04-11"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://i.blogs.es/152e10/lg-velvet-01/1366_2000.jpg",
     "imei": "345678901234513",
     "brand": "LG",
     "model": "Velvet",
@@ -169,7 +169,7 @@
     "releaseDate": "2020-07-22"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2018/10/lgg7thinq-front-back.jpg",
     "imei": "456789012345614",
     "brand": "LG",
     "model": "G7 ThinQ",
@@ -182,8 +182,8 @@
     "releaseDate": "2018-05-02"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
-    "imei": "567890123456715",
+    "imgUrl": "hh",
+    "imei": "https://cdn.dxomark.com/wp-content/uploads/medias/post-28296/lg_v40_thinq.jpg",
     "brand": "LG",
     "model": "V40 ThinQ",
     "color": "#FF3366",
@@ -195,7 +195,7 @@
     "releaseDate": "2018-10-03"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2017/09/LG-G6-Mobile-review-Punchy-pictures.png",
     "imei": "678901234567816",
     "brand": "LG",
     "model": "G6",
@@ -208,7 +208,7 @@
     "releaseDate": "2017-03-10"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2017/09/LG-G5-Mobile-review-Outstanding-results-for-stills.jpg",
     "imei": "789012345678917",
     "brand": "LG",
     "model": "G5",
@@ -221,7 +221,7 @@
     "releaseDate": "2016-04-01"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2018/01/LG_V30.jpg",
     "imei": "890123456789018",
     "brand": "LG",
     "model": "V30",
@@ -234,7 +234,7 @@
     "releaseDate": "2017-09-21"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://i.blogs.es/bf91a0/lg-v30-pantalla/1366_2000.jpg",
     "imei": "901234567890119",
     "brand": "LG",
     "model": "V30",
@@ -247,7 +247,7 @@
     "releaseDate": "2015-04-29"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.andro4all.com/andro4all/2017/08/LG-V30.jpg?width=1200",
     "imei": "012345678901220",
     "brand": "LG",
     "model": "V30",
@@ -260,7 +260,7 @@
     "releaseDate": "2016-10-28"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/11188927-1000-1000/2180996.jpg?v=637980105704430000",
     "imei": "123456789012321",
     "brand": "iPhone",
     "model": "12 Pro",
@@ -273,7 +273,7 @@
     "releaseDate": "2020-10-23"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/8479437-1000-1000/imageUrl_1.jpg?v=637868577467800000",
     "imei": "234567890123422",
     "brand": "iPhone",
     "model": "11",
@@ -287,7 +287,7 @@
   },
   {
     "imgUrl": "hhhhhhhhhhhhhhhh",
-    "imei": "345678901234523",
+    "imei": "https://oechsle.vteximg.com.br/arquivos/ids/11311152-1000-1000/imageUrl_2.jpg?v=637986388571330000",
     "brand": "iPhone",
     "model": "SE (2020)",
     "color": "#66CC99",
@@ -299,7 +299,7 @@
     "releaseDate": "2020-04-24"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18130598-1000-1000/imageUrl_1.jpg?v=638533232834670000",
     "imei": "456789012345624",
     "brand": "iPhone",
     "model": "XR",
@@ -312,7 +312,7 @@
     "releaseDate": "2018-10-26"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18130455-1000-1000/imageUrl_1.jpg?v=638533231875030000",
     "imei": "567890123456725",
     "brand": "iPhone",
     "model": "8 Plus",
@@ -325,7 +325,7 @@
     "releaseDate": "2017-09-22"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18148388-1000-1000/imageUrl_1.jpg?v=638533381094030000",
     "imei": "678901234567826",
     "brand": "iPhone",
     "model": "X",
@@ -338,7 +338,7 @@
     "releaseDate": "2017-11-03"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18187728-1000-1000/imageUrl_1.jpg?v=638540279609700000",
     "imei": "789012345678927",
     "brand": "iPhone",
     "model": "7",
@@ -351,7 +351,7 @@
     "releaseDate": "2016-09-16"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/10307319-1000-1000/imageUrl_1.jpg?v=637953711361230000",
     "imei": "890123456789028",
     "brand": "iPhone",
     "model": "6S",
@@ -364,7 +364,7 @@
     "releaseDate": "2015-09-25"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2017/09/apple-iphone-5s-space-gray-3d-model-max-obj.jpg",
     "imei": "901234567890129",
     "brand": "iPhone",
     "model": "5S",
@@ -377,7 +377,7 @@
     "releaseDate": "2013-09-20"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/2017/09/Apple-iPhone-4S.jpg",
     "imei": "012345678901230",
     "brand": "iPhone",
     "model": "4S",
@@ -390,7 +390,7 @@
     "releaseDate": "2011-10-14"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18018147-1000-1000/imageUrl_1.jpg?v=638513785965800000",
     "imei": "123456789012331",
     "brand": "Huawei",
     "model": "P40 Pro",
@@ -403,7 +403,7 @@
     "releaseDate": "2020-04-07"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/17422260-1000-1000/imageUrl_1.jpg?v=638505762716170000",
     "imei": "234567890123432",
     "brand": "Huawei",
     "model": "Mate 40 Pro",
@@ -416,7 +416,7 @@
     "releaseDate": "2020-10-22"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18018146-1000-1000/imageUrl_1.jpg?v=638513784776970000",
     "imei": "345678901234533",
     "brand": "Huawei",
     "model": "P30 Pro",
@@ -429,7 +429,7 @@
     "releaseDate": "2019-03-26"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18187475-1000-1000/imageUrl_1.jpg?v=638540273884030000",
     "imei": "456789012345634",
     "brand": "Huawei",
     "model": "Mate 20 Pro",
@@ -442,7 +442,7 @@
     "releaseDate": "2018-10-16"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/17435681-1000-1000/imageUrl_1.jpg?v=638505863489630000",
     "imei": "567890123456735",
     "brand": "Huawei",
     "model": "P20 Pro",
@@ -455,7 +455,7 @@
     "releaseDate": "2018-03-27"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/17422536-1000-1000/imageUrl_1.jpg?v=638505764866070000",
     "imei": "678901234567836",
     "brand": "Huawei",
     "model": "P20 Pro",
@@ -468,7 +468,7 @@
     "releaseDate": "2017-10-17"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-22273/huawei-p20-pro-midnight-blue-original.jpg",
     "imei": "789012345678937",
     "brand": "Huawei",
     "model": "P20 Pro",
@@ -481,7 +481,7 @@
     "releaseDate": "2017-04-05"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/17422537-1000-1000/imageUrl_1.jpg?v=638505764907170000",
     "imei": "890123456789038",
     "brand": "Huawei",
     "model": "P20 Pro",
@@ -494,7 +494,7 @@
     "releaseDate": "2016-11-03"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://i.blogs.es/28788e/p9-plus/1366_2000.jpg",
     "imei": "901234567890139",
     "brand": "Huawei",
     "model": "P9 Plus",
@@ -507,7 +507,7 @@
     "releaseDate": "2016-08-17"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/16328476-1000-1000/image-0.jpg?v=638313159887030000",
     "imei": "012345678901240",
     "brand": "Huawei",
     "model": "Mate 8",
@@ -520,7 +520,7 @@
     "releaseDate": "2015-11-26"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/16824929-1000-1000/image-c4445d30abb24ae3a58a0f9baf476d4e.jpg?v=638359423156970000",
     "imei": "123456789012341",
     "brand": "Xiaomi",
     "model": "Mi 11",
@@ -533,7 +533,7 @@
     "releaseDate": "2020-12-28"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18017947-1000-1000/imageUrl_1.jpg?v=638513737328070000",
     "imei": "234567890123442",
     "brand": "Xiaomi",
     "model": "Redmi Note 10",
@@ -546,7 +546,7 @@
     "releaseDate": "2021-03-04"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/18017930-1000-1000/imageUrl_1.jpg?v=638513730466270000",
     "imei": "345678901234543",
     "brand": "Xiaomi",
     "model": "Mi 10T Pro",
@@ -559,7 +559,7 @@
     "releaseDate": "2020-10-01"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/5621181-1000-1000/image-669d9a16c9e74f2a940aa010a307986e.jpg?v=637708883078300000",
     "imei": "456789012345644",
     "brand": "Xiaomi",
     "model": "Poco X3 NFC",
@@ -572,7 +572,7 @@
     "releaseDate": "2020-09-07"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-26390/xiaomimi9.jpg",
     "imei": "567890123456745",
     "brand": "Xiaomi",
     "model": "Mi 9",
@@ -585,7 +585,7 @@
     "releaseDate": "2019-06-12"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/14540359-1000-1000/image-3183a254defe498c884fdf02683f3862.jpg?v=638280195797900000",
     "imei": "678901234567846",
     "brand": "Xiaomi",
     "model": "Mi 9",
@@ -598,7 +598,7 @@
     "releaseDate": "2019-10-21"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/3837873-1000-1000/image-d76e186cba46413c862c6d5db709c783.jpg?v=637582828983300000",
     "imei": "789012345678947",
     "brand": "Xiaomi",
     "model": "Mi 9",
@@ -611,7 +611,7 @@
     "releaseDate": "2019-02-20"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://oechsle.vteximg.com.br/arquivos/ids/17899643-1000-1000/imageUrl_1.jpg?v=638508579299730000",
     "imei": "890123456789048",
     "brand": "Xiaomi",
     "model": "Redmi Note 7",
@@ -624,7 +624,7 @@
     "releaseDate": "2019-01-10"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.dxomark.com/wp-content/uploads/medias/post-23978/mimix3.jpg",
     "imei": "901234567890149",
     "brand": "Xiaomi",
     "model": "Mi Mix 3",
@@ -637,7 +637,7 @@
     "releaseDate": "2018-11-01"
   },
   {
-    "imgUrl": "hhhhhhhhhhhhhhhh",
+    "imgUrl": "https://cdn.smart-gsm.com/img/picture/xiaomi-redmi-note-5.jpg",
     "imei": "012345678901250",
     "brand": "Xiaomi",
     "model": "Redmi Note 5",

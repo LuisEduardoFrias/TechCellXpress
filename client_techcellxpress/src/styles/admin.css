@@ -12,6 +12,13 @@
   justify-items: center;
   align-items: center;
   
+  >#back-btn {
+    grid-area: h2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
   >h2 {
     grid-area: h2;
     text-align: center;
@@ -34,7 +41,7 @@
     }
   }
   
-  >button {
+  >.delete-btn {
     height: 45px;
     width: 200px;
   }
