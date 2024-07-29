@@ -39,8 +39,8 @@ Cell Phone Store Manager.
  - [x] Implementar rutas para navegar entre las diferentes vistas (lista de productos, agregar producto, editar producto, registros).
  - [x] Utilizar servicios para consumir la API RESTful creada en el backend.
  - [x] Al hacer clic en "Cargar productos de prueba" debe agregar 50 productos.
- - [] Al hacer clic en "Eliminar todos los productos", ejecutar el procedimiento de eliminación y mostrar una barra de progreso del 0 al 100% que se actualice en tiempo real.
- - [] Mostrar una lista de los productos eliminados en una pantalla llamada registros dentro del sitio.
+ - [x] Al hacer clic en "Eliminar todos los productos", ejecutar el procedimiento de eliminación y mostrar una barra de progreso del 0 al 100% que se actualice en tiempo real.
+ - [x] Mostrar una lista de los productos eliminados en una pantalla llamada registros dentro del sitio.
 
 ### Requerido
 
@@ -53,8 +53,8 @@ Cell Phone Store Manager.
  - [x] Debe ser posible listar los productos de las APIs externas.
  - [x] Debe tener un botón para poder cargar 50 productos.
  - [x] Debe tener un botón para poder eliminar todos los productos del sitio.
- - [] Debe tener una barra de progreso mostrando el estado de la eliminación del 0 al 100%.
- - [] Debe tener una pantalla llamada registros donde se pueden ver los productos que fueron eliminados.
+ - [x] Debe tener una barra de progreso mostrando el estado de la eliminación del 0 al 100%.
+ - [x] Debe tener una pantalla llamada registros donde se pueden ver los productos que fueron eliminados.
 
 ### Entrega
 

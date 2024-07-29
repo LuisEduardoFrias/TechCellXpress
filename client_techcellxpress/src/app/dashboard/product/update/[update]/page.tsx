@@ -15,6 +15,7 @@ export default function Update() {
   const [loading, setLoading] = useState(true)
   const router = useRouter();
   const params = useParams();
+
   if (!params) notFound();
 
   type Phone = PhoneModel & CapacityModel;
@@ -33,7 +34,7 @@ export default function Update() {
       setProduct(data);
       setLoading(false);
     })()
-  }, [])
+  }, [params])
 
   /*
   I'm not going to check the fields this time!
@@ -55,7 +56,7 @@ export default function Update() {
     const phone = PhoneModel.mapper(da);
     phone.capacity = capacity;
 
-    const { error, data } = await Product.put(params.delete, phone, getCookie("access_token"))
+    const { error, data } = await Product.put(params.update, phone, getCookie("access_token"))
 
     if (error) {
       //alert
@@ -79,35 +80,35 @@ export default function Update() {
         <fieldset>
           <legend>Phone product</legend>
 
-          <div class="field">
+          <div className="field">
             <label>Imagen:
               <input id="imgUrl" name="imgUrl" defaultValue={product?.imgUrl} type="text" />
               <Span htmlFor="imgUrl" required="This field is required." />
             </label>
           </div>
 
-          <div class="field">
+          <div className="field">
             <label>Marca:
               <input id="brand" name="brand" defaultValue={product?.brand} placeholder="Samsung, Huawei, Xiaomi..." type="text" />
               <Span htmlFor="brand" required="This field is required." />
             </label>
           </div>
 
-          <div class="field">
+          <div className="field">
             <label>Modelo:
               <input id="model" name="model" defaultValue={product?.model} placeholder="S4, Redmi, Honor..." type="text" />
               <Span htmlFor="model" required="This field is required." />
             </label>
           </div>
 
-          <div class="field">
+          <div className="field">
             <label>Color:
               <input id="color" name="color" type="color" defaultValue={product?.color} />
               <Span htmlFor="color" required="This field is required." />
             </label>
           </div>
 
-          <div class="field">
+          <div className="field">
             <label>Fecha de lanzamiento:
               <input id="releaseDate" name="releaseDate"
                 defaultValue={`${product?.releaseDate}T01:00:00`} type="datetime-local" />
@@ -117,34 +118,34 @@ export default function Update() {
 
           <fieldset>
             <legend>Capacity</legend>
-            <div class="field">
+            <div className="field">
               <label>Almacenamiento interno:
                 <input id="rom" name="rom" placeholder="16GB, 32GB..." defaultValue={product?.capacity.rom} type="text" />
                 <Span htmlFor="rom" required="This field is required." />
               </label>
             </div>
 
-            <div class="field">
+            <div className="field">
               <label>Memoria RAM:
                 <input id="ramMemory" name="ramMemory" placeholder="2GB, 4GB, 6GB..." defaultValue={product?.capacity.ramMemory} type="text" />
                 <Span htmlFor="ramMemory" required="This field is required." />
               </label>
             </div>
 
-            <div class="field">
+            <div className="field">
               <label>Procesador:
                 <input id="processor" name="processor" defaultValue={product?.capacity.processor} placeholder="Exynos, Snapdragon..." type="text" />
                 <Span htmlFor="processor" required="This field is required." />
               </label>
             </div>
-{
-//             <div class="field">
-//               <label>Velocidad del procesador:
-//                 <input id="processorSpeed" name="processorSpeed" defaultValue={product?.processorSpeed} placeholder="2GHz, 3.2GHz..." type="text" />
-//                 <Span htmlFor="processorSpeed" required="This field is required." />
-//               </label>
-//             </div>
-}
+            {
+              //             <div className="field">
+              //               <label>Velocidad del procesador:
+              //                 <input id="processorSpeed" name="processorSpeed" defaultValue={product?.processorSpeed} placeholder="2GHz, 3.2GHz..." type="text" />
+              //                 <Span htmlFor="processorSpeed" required="This field is required." />
+              //               </label>
+              //             </div>
+            }
           </fieldset>
         </fieldset>
       </Form>

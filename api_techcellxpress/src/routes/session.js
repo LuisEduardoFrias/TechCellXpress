@@ -14,7 +14,7 @@ const router = express.Router();
 // routes
 router.post('/login', async (req, res) => {
   const { user, password } = req.body;
-  console.log("user: ", user, " pass: " + password);
+  
   try {
     const { error, data } = await Session_.login(user, password);
 

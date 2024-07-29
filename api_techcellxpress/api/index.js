@@ -48,9 +48,21 @@ app.use(morgan('dev')); // combined
 app.use(cors(configCors));
 
 //web socket
-Socket(httpServer, "removeAll", (emit) => {
-  Admin.removeAllWithprogress((progress) =>
-    emit('ProgressRemoveDb', progress));
+Socket(httpServer, "removeAll", (socket) => {
+
+  (async () => {
+
+    const ard = await Admin.removeAllWithprogress((progress) => {
+      try {
+        socket?.emit('ProgressRemoveDb', progress);
+      } catch (error) {
+        console.log("error: " + error)
+      }
+    });
+
+    socket.emit('DeleteCompleted', ard);
+
+  })()
 });
 
 //routers
