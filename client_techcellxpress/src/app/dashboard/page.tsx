@@ -123,7 +123,7 @@ export default function Home() {
             dataShow.map(e =>
               <div key={e.id} className="container-card">
                 <div>
-                  <Image src={e.imgUrl} alt={e.model} priority width="300" height="300" />
+                  <img src={e.imgUrl} alt={e.model}  />
                 </div>
                 <div>
                   <span>{`${e.brand} ${e.model}`}</span>

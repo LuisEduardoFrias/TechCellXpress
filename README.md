@@ -1,16 +1,5 @@
-# TechCellXpress
-Cell Phone Store Manager.
-
- - Recommended nodeJs version v22.2.0, If you are using a later version to run in development, remove '--watch' from the development execution scripts.
- - Execute the command in the root folder --> 'yarn dev' the 'keywords' is configured with 'yarn'.
- - Test user --> luisf
- - Test pass --> luisf
-
----------------------------------------
 
 # Prueba Asíncrona de Desarrollador Full Stack JavaScript
-
-### Lexart ® 2024
 
 ## Ingeniería de software
 
@@ -58,5 +47,5 @@ Cell Phone Store Manager.
 
 ### Entrega
 
-Envíe el repositorio y el enlace de la solución a: contacto@lexartlabs.xyz con el asunto: "Nombre del candidato - Prueba FullStack - Software"
+Envíe el repositorio y el enlace de la solución a: ---------- con el asunto: "Nombre del candidato - Prueba FullStack - Software"
 Hacer el despliegue de la aplicación en Vercel.

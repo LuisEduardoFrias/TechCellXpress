@@ -66,8 +66,7 @@ export default function Delete() {
       <div>
         {
           product?.imgUrl &&
-          <Image src={product?.imgUrl} alt={`Image of product ${product?.brand} ${product?.model}.`} 
-          priority width="300" height="300"/>
+          <img src={product?.imgUrl} alt={`Image of product ${product?.brand} ${product?.model}.`} />
         }
       </div>
 
